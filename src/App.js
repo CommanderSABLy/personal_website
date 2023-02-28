@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import { RWA } from './questions';
+//I can probably just have all of the tests come from questions
+import { MRS } from './questions';
 import './quiz.css';
 
 function Quiz() {
@@ -8,7 +9,8 @@ function Quiz() {
   const [selectedAnswer, setSelectedAnswer] = useState('')
   const [showResult, setShowResult] = useState(false)
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null)
-  const { questions } = RWA
+  //questions will need to be selected based on menu selection
+  const { questions } = MRS
   const { question, choices, scoring } = questions[activeQuestion]
   const [result, setResult] = useState(0)
 
@@ -94,7 +96,7 @@ function Quiz() {
         <div className="result">
           <h3>Right Wing Authoritarianism Score</h3>
           <p>
-            Total Score:<span> {100 * ((result - 30) /240)}%</span>
+            Total Score:<span> {100 * ((result - 7) /56)}%</span>
           </p>
           <p>
             Total Questions: <span>{questions.length}</span>

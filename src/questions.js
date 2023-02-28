@@ -10,6 +10,19 @@ const nine_scale = [
     'Very Strongly Agree',
 ]
 
+const push_speed_scale = [
+    'Trying to push very much too fast.',
+    'Going too slowly',
+    'Moving at about the right speed',
+]
+
+const four_scale = [
+    'Strongly Agree',
+    'Somewhat Agree',
+    'Somewhat Disagree',
+    'Strongly Disagree',
+]
+
 export const RWA = {
     topic: 'Right Wing Authoritarianism',
     questions: [
@@ -185,3 +198,48 @@ export const RWA = {
         },
     ]
 }
+
+export const MRS = {
+    topic: '',
+    questions: [
+        {
+            question: 'It is easy to understand the anger of black people in America.',
+            choices: nine_scale,
+            scoring: 'Descend'
+        },
+        {
+            question: 'Blacks have more influence upon school desegregation plans that they ought to have.',
+            choices: nine_scale,
+            scoring: 'Ascend',
+        },
+        {
+            question:'Blacks are getting too demanding in their push for equal rights.',
+            choices: nine_scale,
+            scoring: 'Ascend',
+        },
+        {
+            question:'Over the past few years blacks have gotten more economically than they deserve.',
+            choices: nine_scale,
+            scoring: 'Ascend',
+        },
+        {
+            question: 'Over the past few years the government and news media have shown more respect to blacks than they deserve.',
+            choices: nine_scale,
+            scoring: 'Ascend',
+        },
+        {
+            question: 'Blacks should not push themselves where they\'re not wanted.',
+            choices: nine_scale,
+            scoring: 'Ascend',
+        },
+        {
+            question: 'Discrimination against blacks is no longer a problem in the United States.',
+            choices: nine_scale,
+            scoring: 'Ascend',
+        },
+    ]
+}
+
+//export const SRS = {
+
+//}
