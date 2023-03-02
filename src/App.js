@@ -1,9 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
+import { RWA, MRS, SRS } from "./questions"
 //I can probably just have all of the tests come from questions
-import { RWA } from './questions';
-import { MRS } from './questions';
-import { SRS } from './questions';
 import './quiz.css';
 
 function Quiz() {
@@ -12,7 +10,10 @@ function Quiz() {
   const [showResult, setShowResult] = useState(false)
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null)
   //questions will need to be selected based on menu selection
-  const { topic, max_score, questions } = SRS
+  const [exam, setExam] = useState(RWA)
+  const { topic, max_score, questions } = exam
+  const tests = [RWA.topic, MRS.topic, SRS.topic]
+  const [testSelected, setTestSelected] = useState(false)
   const { question, choices, scoring } = questions[activeQuestion]
   const [result, setResult] = useState(0)
 
@@ -89,50 +90,78 @@ function Quiz() {
     }
   }
 
+  const onTestSelect = (test) => {
+    if (test === tests[0]){
+        setExam(RWA)
+        setTestSelected(true)
+    } else if (test === tests[1]){
+        setExam(MRS)
+        setTestSelected(true)
+    } else if (test === tests[2]){
+        setExam(SRS)
+        setTestSelected(true)
+    }
+}
+
   const addLeadingZero = (number) => (number > 9 ? number : `0${number}`)
 
   return (
     <div className="quiz-container">
-      {!showResult ? (
+      {testSelected ? (
         <div>
+        {!showResult ? (
           <div>
-          <span className="active-question-no">
-            {addLeadingZero(activeQuestion + 1)}
-          </span>
-          <span className="total-question">
-            /{addLeadingZero(questions.length)}
-          </span>
-        </div>
-        <h2>
-          {question}
-        </h2>
+            <div>
+            <span className="active-question-no">
+              {addLeadingZero(activeQuestion + 1)}
+            </span>
+            <span className="total-question">
+              /{addLeadingZero(questions.length)}
+            </span>
+          </div>
+          <h2>
+            {question}
+          </h2>
 
-        <ul>
-          {choices.map((answer, index) =>(
-            <li
-            onClick={() => onAnswerSelected(answer, index, scoring)}
-            key={answer}
-            className={selectedAnswerIndex === index ? 'selected-answer' : null}>
-            {answer}</li>
-          ))}
-          {result}
-        </ul>
-        <div className="flex-right">
-          <button onClick={onClickNext} disabled={selectedAnswerIndex === null}>{activeQuestion === questions.length - 1 ? 'Finish': 'Next'} </button>
-        </div>
+          <ul>
+            {choices.map((answer, index) =>(
+              <li
+              onClick={() => onAnswerSelected(answer, index, scoring)}
+              key={answer}
+              className={selectedAnswerIndex === index ? 'selected-answer' : null}>
+              {answer}</li>
+            ))}
+          </ul>
+          <div className="flex-right">
+            <button onClick={onClickNext} disabled={selectedAnswerIndex === null}>{activeQuestion === questions.length - 1 ? 'Finish': 'Next'} </button>
+          </div>
+          </div>
+        ) : (
+          <div className="result">
+            <h3>{topic} Score</h3>
+            <p>
+              Total Score:<span> {100 * ((result - questions.length) / max_score).toPrecision(4)}%</span>
+            </p>
+            <p>
+              Total Questions: <span>{questions.length}</span>
+            </p>
+          </div>
+        )}
         </div>
       ) : (
-        <div className="result">
-          <h3>{topic} Score</h3>
-          <p>
-            Total Score:<span> {100 * ((result - questions.length) / max_score).toPrecision(4)}%</span>
-          </p>
-          <p>
-            Total Questions: <span>{questions.length}</span>
-          </p>
+        <div>
+            <h2>Choose your test</h2>
+
+            <ul>
+            {tests.map((test) =>(
+              <li
+              onClick={() => onTestSelect(test)}
+              key={test}>
+              {test}</li>
+            ))}
+            </ul>
         </div>
       )}
-      
     </div>
   );
 }

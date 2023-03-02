@@ -191,7 +191,8 @@ export const RWA = {
             choices: nine_scale,
             scoring: 'Ascend9'
         },
-    ]
+    ],
+    info: 'The Right Wing Authoritarianism Test is about whether or not you are a fascist and comes from the 60s. You can see this in Question something when it asks about "More civil rights." Now don\'t be a fascist.'
 }
 
 export const MRS = {
@@ -233,7 +234,8 @@ export const MRS = {
             choices: nine_scale,
             scoring: 'Ascend9',
         },
-    ]
+    ],
+    info: 'The Modern Racism Scale is actually a bit old so it isn\'t particularly modern anymore. It should be obvious what to say as a non-racist.'
 }
 
 export const SRS = {
@@ -280,5 +282,6 @@ export const SRS = {
             choices: four_scale,
             scoring: 'Descend4'
         }
-    ]
+    ],
+    info: 'The Symbolic Racism Scale is the newer of the two racism tests, coming from 2002. It should still be obvious.'
 }
