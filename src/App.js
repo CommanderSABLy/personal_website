@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
-import { RWA, MRS, SRS } from "./questions"
+import { RWA, MRS, SRS } from "./questions";
 //I can probably just have all of the tests come from questions
 import './quiz.css';
+import gswwii from './german_soldiers_wwii.jpg';
 
 function Quiz() {
   const [activeQuestion, setActiveQuestion] = useState(0)
@@ -92,15 +93,28 @@ function Quiz() {
 
   const onTestSelect = (test) => {
     if (test === tests[0]){
-        setExam(RWA)
-        setTestSelected(true)
+      //Figure out why it doesn't work with local files
+      document.body.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/4/47/WW2_German_occupation_Oslo_Norway_1940-04-09_Wehrmacht_troop_Soldiers_marching_Karl_Johans_gate_Slottet_Universitetet_Mounted_police_etc_Henriksen_%26_Steen_Nasjonalbiblioteket_Public_domain_URN_NBN_no-nb_digifoto_20180102_00043_NB_HS_O_0.jpg')"
+      setExam(RWA)
+      setTestSelected(true)
     } else if (test === tests[1]){
-        setExam(MRS)
-        setTestSelected(true)
+      document.body.style.backgroundImage = 'url("https://upload.wikimedia.org/wikipedia/commons/e/e4/Black_Panther_demonstration.jpg")'
+      setExam(MRS)
+      setTestSelected(true)
     } else if (test === tests[2]){
-        setExam(SRS)
-        setTestSelected(true)
+      document.body.style.backgroundImage = 'url("https://upload.wikimedia.org/wikipedia/commons/e/e4/Black_Panther_demonstration.jpg")'
+      setExam(SRS)
+      setTestSelected(true)
     }
+}
+
+const onClickReturn = () => {
+  document.body.style.backgroundImage = 'url("https://www.publicdomainpictures.net/pictures/20000/velka/rain-on-window.jpg")'
+  setSelectedAnswer(null)
+  setSelectedAnswerIndex(null)
+  setShowResult(false)
+  setResult(0)
+  setTestSelected(false)
 }
 
   const addLeadingZero = (number) => (number > 9 ? number : `0${number}`)
@@ -112,29 +126,29 @@ function Quiz() {
         {!showResult ? (
           <div>
             <div>
-            <span className="active-question-no">
-              {addLeadingZero(activeQuestion + 1)}
-            </span>
-            <span className="total-question">
-              /{addLeadingZero(questions.length)}
-            </span>
-          </div>
-          <h2>
-            {question}
-          </h2>
+              <span className="active-question-no">
+                {addLeadingZero(activeQuestion + 1)}
+              </span>
+              <span className="total-question">
+                /{addLeadingZero(questions.length)}
+              </span>
+            </div>
+            <h2>
+              {question}
+            </h2>
 
-          <ul>
-            {choices.map((answer, index) =>(
-              <li
-              onClick={() => onAnswerSelected(answer, index, scoring)}
-              key={answer}
-              className={selectedAnswerIndex === index ? 'selected-answer' : null}>
-              {answer}</li>
-            ))}
-          </ul>
-          <div className="flex-right">
-            <button onClick={onClickNext} disabled={selectedAnswerIndex === null}>{activeQuestion === questions.length - 1 ? 'Finish': 'Next'} </button>
-          </div>
+            <ul>
+              {choices.map((answer, index) =>(
+                <li
+                onClick={() => onAnswerSelected(answer, index, scoring)}
+                key={answer}
+                className={selectedAnswerIndex === index ? 'selected-answer' : null}>
+                {answer}</li>
+              ))}
+            </ul>
+            <div className="flex-right">
+              <button onClick={onClickNext} disabled={selectedAnswerIndex === null}>{activeQuestion === questions.length - 1 ? 'Finish': 'Next'} </button>
+            </div>
           </div>
         ) : (
           <div className="result">
@@ -145,6 +159,9 @@ function Quiz() {
             <p>
               Total Questions: <span>{questions.length}</span>
             </p>
+            <div className="flex-right">
+              <button onClick={onClickReturn}>Return to Menu</button>
+            </div>
           </div>
         )}
         </div>
