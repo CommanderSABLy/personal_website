@@ -17,6 +17,7 @@ function Quiz() {
   const [testSelected, setTestSelected] = useState(false)
   const { question, choices, scoring } = questions[activeQuestion]
   const [result, setResult] = useState(0)
+  const [showInfo, setShowInfo] = useState(true)
 
 
   const onClickNext = () => {
@@ -29,6 +30,10 @@ function Quiz() {
     }
     setSelectedAnswer(null)
     setSelectedAnswerIndex(null)
+  }
+
+  const onClickStart = () => {
+    setShowInfo(false)
   }
 
   const onAnswerSelected = (answer, index) => {
@@ -125,30 +130,42 @@ const onClickReturn = () => {
         <div>
         {!showResult ? (
           <div>
+            {!showInfo ? (
             <div>
-              <span className="active-question-no">
-                {addLeadingZero(activeQuestion + 1)}
-              </span>
-              <span className="total-question">
-                /{addLeadingZero(questions.length)}
-              </span>
-            </div>
-            <h2>
-              {question}
-            </h2>
+              <div>
+                <span className="active-question-no">
+                  {addLeadingZero(activeQuestion + 1)}
+                </span>
+                <span className="total-question">
+                  /{addLeadingZero(questions.length)}
+                </span>
+              </div>
+              <h2>
+                {question}
+              </h2>
 
-            <ul>
-              {choices.map((answer, index) =>(
-                <li
-                onClick={() => onAnswerSelected(answer, index, scoring)}
-                key={answer}
-                className={selectedAnswerIndex === index ? 'selected-answer' : null}>
-                {answer}</li>
-              ))}
-            </ul>
-            <div className="flex-right">
-              <button onClick={onClickNext} disabled={selectedAnswerIndex === null}>{activeQuestion === questions.length - 1 ? 'Finish': 'Next'} </button>
+              <ul>
+                {choices.map((answer, index) =>(
+                  <li
+                  onClick={() => onAnswerSelected(answer, index, scoring)}
+                  key={answer}
+                  className={selectedAnswerIndex === index ? 'selected-answer' : null}>
+                  {answer}</li>
+                ))}
+              </ul>
+              <div className="flex-right">
+                <button onClick={onClickNext} disabled={selectedAnswerIndex === null}>{activeQuestion === questions.length - 1 ? 'Finish': 'Next'} </button>
+              </div>
             </div>
+            ) : (
+              <div>
+                <h3>{topic}</h3>
+                <p>{exam.info}</p>
+                <div className="flex-right">
+                  <button onClick={onClickStart}>Start</button>
+                </div>
+              </div>
+            )}
           </div>
         ) : (
           <div className="result">
