@@ -2,12 +2,12 @@
 
 body {
   font-family: 'Anek Malayalam', sans-serif;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/82/USS_Johnston_%28DD-557%29_underway_on_27_October_1943_%28NH_63495%29.jpg");
+  background-image: url("https://fossbytes.com/wp-content/uploads/2022/06/spy-x-family-anya-smug-1024x576.jpg");
   background-size: cover;
   color: #000000;
   display: flex;
   justify-content: center;
-  margin: 0;
+  margin: 0 auto;
   padding: 0 30px;
 }
 
@@ -16,7 +16,8 @@ body {
   min-width: 250px;
   background: #c3c3c3e5;
   border-radius: 16px;
-  margin-top: 75px;
+  margin: 0 auto;
+  margin-top: 50px;
   padding: 20px 45px;
 }
 

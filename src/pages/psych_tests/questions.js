@@ -20,6 +20,7 @@ const four_scale = [
 export const RWA = {
     topic: 'Right Wing Authoritarianism',
     max_score: 240,
+    scored: 30,
     questions: [
         {
             question: 'Life imprisonment is justified for certain crimes.',
@@ -127,7 +128,7 @@ export const RWA = {
             scoring: 'Ascend9'
         },
         {
-            question: 'People should pay less attention to the Bible and the other old traditional forms of religious guidance and instead develop their own personal standards of what is moral and immoral.',
+            question: '*People should pay less attention to the Bible and the other old traditional forms of religious guidance and instead develop their own personal standards of what is moral and immoral.',
             choices: nine_scale,
             scoring: 'Descend9'
         },
@@ -152,7 +153,7 @@ export const RWA = {
             scoring: 'Ascend9'
         },
         {
-            question: 'It is wonderful that young people today have greater freedom to protest against things they don\'t like and to make their own rules to govern their behavior.',
+            question: '*It is wonderful that young people today have greater freedom to protest against things they don\'t like and to make their own rules to govern their behavior.',
             choices: nine_scale,
             scoring: 'Descend9'
         },
@@ -200,6 +201,7 @@ export const RWA = {
 export const MRS = {
     topic: 'Modern Racism Scale',
     max_score: 56,
+    scored: 7,
     questions: [
         {
             question: 'It is easy to understand the anger of black people in America.',
@@ -245,6 +247,7 @@ export const MRS = {
 export const SRS = {
     topic: 'Sybmolic Racism Scale',
     max_score: 8,
+    scored: 8,
     questions: [
         {
             question: 'It\'s really a matter of some people not trying hard enough; if blacks would only try harder they could be just as well off as whites.',
