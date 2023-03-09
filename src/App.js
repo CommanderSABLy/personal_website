@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { RWA, MRS, SRS } from "./questions";
 //I can probably just have all of the tests come from questions
 import './quiz.css';
-import gswwii from './german_soldiers_wwii.jpg';
 
 function Quiz() {
   const [activeQuestion, setActiveQuestion] = useState(0)
@@ -99,15 +98,15 @@ function Quiz() {
   const onTestSelect = (test) => {
     if (test === tests[0]){
       //Figure out why it doesn't work with local files
-      document.body.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/4/47/WW2_German_occupation_Oslo_Norway_1940-04-09_Wehrmacht_troop_Soldiers_marching_Karl_Johans_gate_Slottet_Universitetet_Mounted_police_etc_Henriksen_%26_Steen_Nasjonalbiblioteket_Public_domain_URN_NBN_no-nb_digifoto_20180102_00043_NB_HS_O_0.jpg')"
+      document.body.style.backgroundImage = "url('./image/german_soldiers_wwii.jpg')"
       setExam(RWA)
       setTestSelected(true)
     } else if (test === tests[1]){
-      document.body.style.backgroundImage = 'url("https://upload.wikimedia.org/wikipedia/commons/e/e4/Black_Panther_demonstration.jpg")'
+      document.body.style.backgroundImage = 'url("./image/Black_Panther_demonstration.jpg")'
       setExam(MRS)
       setTestSelected(true)
     } else if (test === tests[2]){
-      document.body.style.backgroundImage = 'url("https://upload.wikimedia.org/wikipedia/commons/e/e4/Black_Panther_demonstration.jpg")'
+      document.body.style.backgroundImage = 'url("./image/civil_rights_march.jpg")'
       setExam(SRS)
       setTestSelected(true)
     }
@@ -160,7 +159,9 @@ const onClickReturn = () => {
             ) : (
               <div>
                 <h3>{topic}</h3>
-                <p>{exam.info}</p>
+                <h2>{exam.info}</h2>
+                <p>{exam.img_credit}</p>
+                <p>{exam.citation}</p>
                 <div className="flex-right">
                   <button onClick={onClickStart}>Start</button>
                 </div>
@@ -194,6 +195,7 @@ const onClickReturn = () => {
               {test}</li>
             ))}
             </ul>
+            <p>Image credit: citation</p>
         </div>
       )}
     </div>
