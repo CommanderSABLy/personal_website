@@ -42,17 +42,33 @@ const Gallery = () => {
             }
         }
     }
+    const imgs = document.querySelectorAll('#image-track > .image');
+    const fullPage = document.querySelector('#fullpage');
+
+    imgs.forEach(img => {
+        img.addEventListener('click', function() {
+            fullPage.style.backgroundImage = 'url(' + img.src + ')';
+            fullPage.style.display = 'block';
+        })
+    })
+    fullPage.addEventListener('click', function() {
+        fullPage.style.backgroundImage = 'none';
+        fullPage.style.display = 'none';
+    })
 
     return (
-        <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-            <img class="image" src="image/gallery/usgrant.jpg" draggable="false" />
-            <img class="image" src="image/gallery/eee.jpg" draggable="false" />
-            <img class="image" src="image/gallery/hiroshimashadow.jpg" draggable="false" />
-            <img class="image" src="image/gallery/britishpara.jpg" draggable="false" />
-            <img class="image" src="image/gallery/thirdmarines.jpg" draggable="false" />
-            <img class="image" src="image/gallery/mustang.jpg" draggable="false" />
-            <img class="image" src="image/gallery/smokescreen.jpg" draggable="false" />
-            <img class="image" src="image/gallery/victory.jpg" draggable="false" />
+        <div>
+            <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+                <img class="image" src="image/gallery/usgrant.jpg" draggable="false" />
+                <img class="image" src="image/gallery/eee.jpg" draggable="false" />
+                <img class="image" src="image/gallery/hiroshimashadow.jpg" draggable="false" />
+                <img class="image" src="image/gallery/britishpara.jpg" draggable="false" />
+                <img class="image" src="image/gallery/thirdmarines.jpg" draggable="false" />
+                <img class="image" src="image/gallery/mustang.jpg" draggable="false" />
+                <img class="image" src="image/gallery/smokescreen.jpg" draggable="false" />
+                <img class="image" src="image/gallery/victory.jpg" draggable="false" />
+            </div>
+            <div id="fullpage"></div>
         </div>
     )
 }
