@@ -46,7 +46,7 @@ const Gallery = () => {
     const fullPage = document.querySelector('#fullpage');
 
     imgs.forEach(img => {
-        img.addEventListener('click', function() {
+        img.addEventListener('dblclick', function() {
             fullPage.style.backgroundImage = 'url(' + img.src + ')';
             fullPage.style.display = 'block';
         })
@@ -54,7 +54,7 @@ const Gallery = () => {
     fullPage.addEventListener('click', function() {
         fullPage.style.backgroundImage = 'none';
         fullPage.style.display = 'none';
-    })
+    })/**/
 
     return (
         <div>

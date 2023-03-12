@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { RWA, MRS, SRS } from "./questions";
+import { Link } from 'react-router-dom';
 //I can probably just have all of the tests come from questions
 import './quiz.css';
 
@@ -18,6 +19,12 @@ function Quiz() {
   const [result, setResult] = useState(0)
   const [showInfo, setShowInfo] = useState(true)
 
+  const openInNewTab = (url) => {
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+    if (newWindow) newWindow.opener = null;
+  }
+
+  const reference = <Link href="#" onClick = {() => openInNewTab('https://scales.arabpsychology.com/')}>here</Link>
 
   const onClickNext = () => {
     setResult((prev) => prev + selectedAnswer)
@@ -122,7 +129,7 @@ const onClickReturn = () => {
 }
 
 const resetBackground = () => {
-  {document.body.style.backgroundImage = 'url("https://upload.wikimedia.org/wikipedia/commons/8/82/USS_Johnston_%28DD-557%29_underway_on_27_October_1943_%28NH_63495%29.jpg")'}
+  {document.body.style.backgroundImage = 'url("./image/ninetysecond_infantry.jpg")'}
 }
 
   const addLeadingZero = (number) => (number > 9 ? number : `0${number}`)
@@ -164,8 +171,8 @@ const resetBackground = () => {
               <div>
                 <h3>{topic}</h3>
                 <h2>{exam.info}</h2>
-                <p>{exam.img_credit}</p>
                 <p>{exam.citation}</p>
+                <p>{exam.img_credit}</p>
                 <div className="flex-right">
                   <button onClick={onClickStart}>Start</button>
                 </div>
@@ -200,7 +207,8 @@ const resetBackground = () => {
               {test}</li>
             ))}
             </ul>
-            <p>Image credit: citation</p>
+            <p>Image credit: Office for Emergency Management. Office of War Information. Overseas Operations Branch. New York Office. News and Features Bureau., Public domain, via Wikimedia Commons</p>
+            <p>You can find the tests for all these scales {reference}.</p>
         </div>
       )}
     </div>
