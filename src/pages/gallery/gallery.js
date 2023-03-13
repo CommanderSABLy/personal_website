@@ -11,6 +11,7 @@ const Gallery = () => {
 
     if (window.location.pathname === '/gallery') {
         const track = document.getElementById("image-track");
+        const track2 = document.getElementById("image-track2")
     
         window.onmousedown = e => {
             setMouseDownAt(e.clientX);
@@ -48,9 +49,19 @@ const Gallery = () => {
                 objectPosition: `${nextPercentage + 100}% center`
                 }, { duration: 1200, fill: "forwards" });
             }
+
+            track2.animate({
+                transform: `translate(${nextPercentage}%, 0%)`
+            }, { duration: 1200, fill: "forwards" });
+    
+            for(const image of track2.getElementsByClassName("image")) {
+                image.animate({
+                objectPosition: `${nextPercentage + 100}% center`
+                }, { duration: 1200, fill: "forwards" });
+            }
         }
     }
-    const imgs = document.querySelectorAll('#image-track > .image');
+    const imgs = document.querySelectorAll('.image');
     const fullPage = document.querySelector('#fullpage');
 
     imgs.forEach(img => {
@@ -67,6 +78,21 @@ const Gallery = () => {
                 <h1>Arya, German Shepherd, Born May 1 2018</h1>
             </div>
             <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+                <img class="image" src="image/gallery/youngarya.jpg" draggable="false" />
+                <img class="image" src="image/gallery/sleepdog.jpg" draggable="false" />
+                <img class="image" src="image/gallery/washedoutgoofygirl.jpg" draggable="false" />
+                <img class="image" src="image/gallery/carya.jpg" draggable="false" />
+                <img class="image" src="image/gallery/happyarya.jpg" draggable="false" />
+                <img class="image" src="image/gallery/eastwoodarya.jpg" draggable="false" />
+                <img class="image" src="image/gallery/dognap.jpg" draggable="false" />
+                <img class="image" src="image/gallery/dogdisc.jpg" draggable="false" />
+                <img class="image" src="image/gallery/aryasbednow.jpg" draggable="false" />
+                <img class="image" src="image/gallery/aryasnow.jpg" draggable="false" />
+            </div>
+            <div className="header-container">
+                <h2>Arya, German Shepherd, Born May 1 2018</h2>
+            </div>
+            <div id="image-track2" data-mouse-down-at="0" data-prev-percentage="0">
                 <img class="image" src="image/gallery/youngarya.jpg" draggable="false" />
                 <img class="image" src="image/gallery/sleepdog.jpg" draggable="false" />
                 <img class="image" src="image/gallery/washedoutgoofygirl.jpg" draggable="false" />
