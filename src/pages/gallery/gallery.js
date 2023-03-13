@@ -63,15 +63,20 @@ const Gallery = () => {
 
     return (
         <div>
+            <div className="header-container">
+                <h1>Arya, German Shepherd, Born May 1 2018</h1>
+            </div>
             <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-                <img class="image" src="image/gallery/usgrant.jpg" draggable="false" />
-                <img class="image" src="image/gallery/eee.jpg" draggable="false" />
-                <img class="image" src="image/gallery/hiroshimashadow.jpg" draggable="false" />
-                <img class="image" src="image/gallery/britishpara.jpg" draggable="false" />
-                <img class="image" src="image/gallery/thirdmarines.jpg" draggable="false" />
-                <img class="image" src="image/gallery/mustang.jpg" draggable="false" />
-                <img class="image" src="image/gallery/smokescreen.jpg" draggable="false" />
-                <img class="image" src="image/gallery/victory.jpg" draggable="false" />
+                <img class="image" src="image/gallery/youngarya.jpg" draggable="false" />
+                <img class="image" src="image/gallery/sleepdog.jpg" draggable="false" />
+                <img class="image" src="image/gallery/washedoutgoofygirl.jpg" draggable="false" />
+                <img class="image" src="image/gallery/carya.jpg" draggable="false" />
+                <img class="image" src="image/gallery/happyarya.jpg" draggable="false" />
+                <img class="image" src="image/gallery/eastwoodarya.jpg" draggable="false" />
+                <img class="image" src="image/gallery/dognap.jpg" draggable="false" />
+                <img class="image" src="image/gallery/dogdisc.jpg" draggable="false" />
+                <img class="image" src="image/gallery/aryasbednow.jpg" draggable="false" />
+                <img class="image" src="image/gallery/aryasnow.jpg" draggable="false" />
             </div>
             <div id="fullpage"></div>
         </div>
