@@ -11,7 +11,7 @@ const About = () => {
             <h1>tldr</h1>
             <p>{strings.tldr}</p>
             
-            <h1>Why CS?</h1>
+            <h1>Why Computer Science?</h1>
             <p>{strings.why_cs}</p>
             
             <h1>Why History?</h1>
