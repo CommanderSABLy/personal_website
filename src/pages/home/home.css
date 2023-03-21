@@ -1,6 +1,7 @@
 body {
     background-image: url("https://fossbytes.com/wp-content/uploads/2022/06/spy-x-family-anya-smug-1024x576.jpg");
     background-size: cover;
+    background-attachment: fixed;
     color: #000000;
     display: flex;
     justify-content: center;

@@ -18,8 +18,11 @@ const Navbar = () => {
                     <NavLink to="/gallery" activeStyle>
                         Gallery
                     </NavLink>
-                    <NavLink to="/tests" activeStyle>
-                        Tests
+                    <NavLink to="/scales" activeStyle>
+                        Scales
+                    </NavLink>
+                    <NavLink to="/contact" activeStyle>
+                        Contact
                     </NavLink>
                 </NavMenu>
             </Nav>

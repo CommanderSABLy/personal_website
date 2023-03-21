@@ -5,7 +5,8 @@ import Home from './pages/home/home';
 import Quiz from './pages/psych_tests/quiz';
 import About from './pages/about/about';
 import Recommend from './pages/recommended_media/recommend';
-import Gallery from './pages/gallery/gallery'
+import Gallery from './pages/gallery/gallery';
+import Contact from './pages/contact/contact';
 
 function App() {
     return (
@@ -16,9 +17,10 @@ function App() {
             <Routes>
                 <Route path='/' exact element={<Home />} />
                 <Route path='/about' element={<About/>} />
-                <Route path='/tests' element={<Quiz/>} />
+                <Route path='/scales' element={<Quiz/>} />
                 <Route path='/recommended-media' element={<Recommend/>} />
                 <Route path='/gallery' element={<Gallery/>} />
+                <Route path='/contact' element={<Contact/>} />
             </Routes>
         </Router>
     )
