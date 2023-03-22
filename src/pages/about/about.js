@@ -1,9 +1,14 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 const strings = require("./about.json")
 
 const About = () => {
     const resetBackground = () => {
         document.body.style.backgroundImage = 'none'
+      }
+      const openInNewTab = (url) => {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+        if (newWindow) newWindow.opener = null;
       }
     return (
         <div>
@@ -40,19 +45,24 @@ const About = () => {
             
             <h2>Evolutionary Keyboard Layout Generator</h2>
             <p>{strings.evo_key}</p>
+            <p><Link href="#" onClick = {() => openInNewTab('https://tinyurl.com/2wvz8bvy/')}>Repository</Link></p>
             
             <h2>Data Mining Group Project</h2>
             <p>{strings.data_mine}</p>
+            <iframe src="./image/CS5402_HW7_RyanMaxwell_SaulLynn.pdf" height="550" width="425" title="resume"/>
             
             <h2>Psychology Scales Assessment Tool</h2>
             <p>{strings.psych}</p>
+            <p><Link href="#" onClick = {() => openInNewTab('https://tinyurl.com/2p96k8rc')}>Repository</Link></p>
             
             <h2>Fizzbuzz</h2>
             <p>{strings.fizzbuzz}</p>
+            <p><Link href="#" onClick = {() => openInNewTab('https://tinyurl.com/3fcuux5x')}>Repository</Link></p>
             
             <h2>Unity</h2>
             <p>{strings.unity}</p>
 
+            <h2>Resume</h2>
             <iframe src="./image/resume.pdf" height="550" width="850" title="resume"/>
         </div>
     )
