@@ -67,16 +67,16 @@ const Gallery = () => {
                 <h1>Arya, German Shepherd, Born May 1 2018</h1>
             </div>
             <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-                <img class="image" src="image/gallery/youngarya.jpg" draggable="false" />
-                <img class="image" src="image/gallery/sleepdog.jpg" draggable="false" />
-                <img class="image" src="image/gallery/washedoutgoofygirl.jpg" draggable="false" />
-                <img class="image" src="image/gallery/carya.jpg" draggable="false" />
-                <img class="image" src="image/gallery/happyarya.jpg" draggable="false" />
-                <img class="image" src="image/gallery/eastwoodarya.jpg" draggable="false" />
-                <img class="image" src="image/gallery/dognap.jpg" draggable="false" />
-                <img class="image" src="image/gallery/dogdisc.jpg" draggable="false" />
-                <img class="image" src="image/gallery/aryasbednow.jpg" draggable="false" />
-                <img class="image" src="image/gallery/aryasnow.jpg" draggable="false" />
+                <img className="image" src="image/gallery/youngarya.jpg" draggable="false" />
+                <img className="image" src="image/gallery/sleepdog.jpg" draggable="false" />
+                <img className="image" src="image/gallery/washedoutgoofygirl.jpg" draggable="false" />
+                <img className="image" src="image/gallery/carya.jpg" draggable="false" />
+                <img className="image" src="image/gallery/happyarya.jpg" draggable="false" />
+                <img className="image" src="image/gallery/eastwoodarya.jpg" draggable="false" />
+                <img className="image" src="image/gallery/dognap.jpg" draggable="false" />
+                <img className="image" src="image/gallery/dogdisc.jpg" draggable="false" />
+                <img className="image" src="image/gallery/aryasbednow.jpg" draggable="false" />
+                <img className="image" src="image/gallery/aryasnow.jpg" draggable="false" />
             </div>
             <div id="fullpage"></div>
         </div>

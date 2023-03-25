@@ -4,6 +4,8 @@ body {
     background-color: black;
     background-image: none;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     margin: 0rem;
     overflow-x: hidden;
     user-select: none;
@@ -53,24 +55,6 @@ body {
     background-color: black;
 }
 
-.home {
-    background-size: cover;
-    background-attachment: fixed;
-    background-color: #000000;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 0 0px;
-    height: 90vh;
-    width: 100vw;
-  }
-
-.home-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 10vw;
-}
-
 .about-box, .recommend-box, .gallery-box, .scale-box, .contact-box {
   height: 30vmin;
   width: 30vmin;
@@ -81,25 +65,27 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 16px;
-  box-shadow: -15px 15px 10px rgba(49, 49, 49, 0.45)
+  box-shadow: -15px 15px 10px rgba(82, 82, 82, 0.45)
 }
 
 .about-box {
   background-image: url("../public/image/grad_walk.JPG");
-  background-size: 200%;
-  background-position: 30% 50%;
+  background-size: 275%;
+  background-position: 35% 60%;
   margin-bottom: 10vmin;
 }
 
 .recommend-box {
   background-image: url("https://upload.wikimedia.org/wikipedia/en/7/74/The_Last_Stand_of_the_Tin_Can_Sailors.jpg");
   background-size: cover;
+  margin-bottom: 10vmin;
 }
 
 .gallery-box {
   background-image: url('../public/image/gallery/aryasnow.jpg');
   background-size: cover;
   background-position: 25% 0%;
+  margin-bottom: 10vmin;
 }
 
 .scale-box {
@@ -267,6 +253,23 @@ body {
 
 @media (min-width: 600px) {
 
+    .home {
+        background-size: cover;
+        background-attachment: fixed;
+        background-color: #000000;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 0 0px;
+        height: 90vh;
+        width: 100vw;
+      }
+    
+    .home-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    
     .recommendation_container {
         display: flex;
         flex-direction: column;
@@ -339,6 +342,25 @@ body {
 
 @media (max-width: 600px){
     
+    .home {
+        background-size: cover;
+        background-attachment: fixed;
+        background-color: #000000;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 0 0px;
+        height: 90vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+      }
+    
+    .home-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
     .recommendation_container {
         display: flex;
         flex-direction: column;

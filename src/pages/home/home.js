@@ -36,7 +36,6 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-                <div></div>
             <div className="home-container">
                 <div className="scale-box" onClick={() => handleClick('/scales')}>
                     <div className="effect">
