@@ -1,17 +1,22 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
     const resetBackground = () => {
         document.body.style.backgroundImage = 'none'
+      }
+      const openInNewTab = (url) => {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+        if (newWindow) newWindow.opener = null;
       }
     return (
         <div class="container mt-5">
             {resetBackground()}
             <h1>Contact Me</h1>
             <h3>Email</h3>
-            <h4>saullynn.lynn@gmail.com</h4>
-            <h3>LinkedIn</h3>
-            <h3>GitHub</h3>
+            <h4><Link href="#" onClick = {() => openInNewTab('mailto:saullynn.lynn@gmail.com')}>saullynn.lynn@gmail.com</Link></h4>
+            <h3><Link href="#" onClick = {() => openInNewTab('https://www.linkedin.com/in/saul-lynn-a92576150/')}>LinkedIn</Link></h3>
+            <h3><Link href="#" onClick = {() => openInNewTab('https://tinyurl.com/mr2uevja')}>GitHub</Link></h3>
             <h3>Contact Me Directly</h3>
             <form class="row g-3" action="https://formsubmit.co/" method="POST">
                 <div class="col-md-6">

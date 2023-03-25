@@ -141,3 +141,9 @@
         margin-bottom: 5px;
     }
 }
+
+.filler {
+    height: 60vh;
+    width: 10vw;
+    background-color: black;
+}
