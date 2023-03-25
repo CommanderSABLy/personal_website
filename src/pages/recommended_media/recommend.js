@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import './recommend.css';
+import '../../App.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 const strings = require("./recommend.json");

@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router";
-import './home.css'
+import '../../App.css'
 
 const Home = () => {
     const resetBackground = () => {

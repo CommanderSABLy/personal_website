@@ -1,5 +1,5 @@
 import React from "react";
-import './gallery.css';
+import '../../App.css';
 import { useState } from 'react';
 
 const Gallery = () => {

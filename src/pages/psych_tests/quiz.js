@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { RWA, MRS, SRS } from "./questions";
 import { Link } from 'react-router-dom';
 //I can probably just have all of the tests come from questions
-import './quiz.css';
+import '../../App.css';
 
 function Quiz() {
   const [activeQuestion, setActiveQuestion] = useState(0)
@@ -197,7 +197,7 @@ const resetBackground = () => {
       ) : (
         <div>
             {resetBackground()}
-            <h2>Choose your test</h2>
+            <h1>Choose your test</h1>
 
             <ul>
             {tests.map((test) =>(
