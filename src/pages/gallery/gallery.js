@@ -67,16 +67,16 @@ const Gallery = () => {
                 <h1>Arya, German Shepherd, Born May 1 2018</h1>
             </div>
             <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-                <img className="image" src="image/gallery/youngarya.jpg" draggable="false" />
-                <img className="image" src="image/gallery/sleepdog.jpg" draggable="false" />
-                <img className="image" src="image/gallery/washedoutgoofygirl.jpg" draggable="false" />
-                <img className="image" src="image/gallery/carya.jpg" draggable="false" />
-                <img className="image" src="image/gallery/happyarya.jpg" draggable="false" />
-                <img className="image" src="image/gallery/eastwoodarya.jpg" draggable="false" />
-                <img className="image" src="image/gallery/dognap.jpg" draggable="false" />
-                <img className="image" src="image/gallery/dogdisc.jpg" draggable="false" />
-                <img className="image" src="image/gallery/aryasbednow.jpg" draggable="false" />
-                <img className="image" src="image/gallery/aryasnow.jpg" draggable="false" />
+                <img className="image" src="image/gallery/youngarya.jpg" alt="Young Arya" draggable="false" />
+                <img className="image" src="image/gallery/sleepdog.jpg" alt="Sleeping Dog" draggable="false" />
+                <img className="image" src="image/gallery/washedoutgoofygirl.jpg" alt="Arya being goofy" draggable="false" />
+                <img className="image" src="image/gallery/carya.jpg" alt="Arya in the back of the car at camp" draggable="false" />
+                <img className="image" src="image/gallery/happyarya.jpg" alt="Happy Arya" draggable="false" />
+                <img className="image" src="image/gallery/eastwoodarya.jpg" alt="Arya at my first rental" draggable="false" />
+                <img className="image" src="image/gallery/dognap.jpg" alt="Arya taking a nap" draggable="false" />
+                <img className="image" src="image/gallery/dogdisc.jpg" alt="Arya becoming a disc" draggable="false" />
+                <img className="image" src="image/gallery/aryasbednow.jpg" alt="Arya claiming my bed" draggable="false" />
+                <img className="image" src="image/gallery/aryasnow.jpg" alt="Arya's first snow" draggable="false" />
             </div>
             <div id="fullpage"></div>
         </div>

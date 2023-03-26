@@ -26,7 +26,7 @@ const Recommend = () => {
             </h1>
             <div className="recommendation" data-aos="fade-right">
                 <div className="rec_image_container">
-                    <img className="rec_image" src="https://upload.wikimedia.org/wikipedia/en/7/74/The_Last_Stand_of_the_Tin_Can_Sailors.jpg" draggable="false" />
+                    <img className="rec_image" src="https://upload.wikimedia.org/wikipedia/en/7/74/The_Last_Stand_of_the_Tin_Can_Sailors.jpg" alt="The Last Stand of the Tin Can Sailors Cover" draggable="false" />
                 </div>
                 <div className="title_author">
                     <h2><i>{strings.tincan_title}</i></h2>
@@ -38,7 +38,7 @@ const Recommend = () => {
             </div>
             <div className="recommendation" data-aos="fade-right">
                 <div className="rec_image_container">
-                    <img className="rec_image" src="https://upload.wikimedia.org/wikipedia/en/d/db/Fahrenheit_451_1st_ed_cover.jpg" draggable="false" /> 
+                    <img className="rec_image" src="https://upload.wikimedia.org/wikipedia/en/d/db/Fahrenheit_451_1st_ed_cover.jpg" alt="Fahrenheit 451 Cover" draggable="false" /> 
                 </div>
                 <div className="title_author">
                     <h2><i>{strings.f451_title}</i></h2>
@@ -50,7 +50,7 @@ const Recommend = () => {
             </div>
             <div className="recommendation" data-aos="fade-right">
                 <div className="rec_image_container">
-                    <img className="rec_image" src="https://img1.od-cdn.com/ImageType-400/0887-1/C06/900/3F/%7BC069003F-5DC4-4532-86A5-8CB6C4D6C4FF%7DImg400.jpg" draggable="false" />
+                    <img className="rec_image" src="https://img1.od-cdn.com/ImageType-400/0887-1/C06/900/3F/%7BC069003F-5DC4-4532-86A5-8CB6C4D6C4FF%7DImg400.jpg" alt="Hell Before Their Very Eyes Cover" draggable="false" />
                 </div>
                 <div className="title_author">
                     <h2><i>{strings.mcmanus_title}</i></h2>
@@ -67,7 +67,7 @@ const Recommend = () => {
 
             <div className="recommendation" data-aos="fade-right">
                 <div className="rec_image_container">
-                    <img className="rec_image" src="https://upload.wikimedia.org/wikipedia/en/3/34/Fallout_New_Vegas.jpg" draggable="false" />
+                    <img className="rec_image" src="https://upload.wikimedia.org/wikipedia/en/3/34/Fallout_New_Vegas.jpg" alt="Fallout: New Vegas Cover" draggable="false" />
                 </div>
                 <div className="title_author">
                     <h2><i>{strings.fnv_title}</i></h2>
@@ -81,7 +81,7 @@ const Recommend = () => {
             
             <div className="recommendation" data-aos="fade-right">
                 <div className="rec_image_container">
-                    <img className="rec_image" src="https://upload.wikimedia.org/wikipedia/en/d/de/Jak_X_-_Combat_Racing_Coverart.png" draggable="false" />
+                    <img className="rec_image" src="https://upload.wikimedia.org/wikipedia/en/d/de/Jak_X_-_Combat_Racing_Coverart.png" alt="Jak X Combat Racing Cover" draggable="false" />
                 </div>
                 <div className="title_author">
                     <h2><i>{strings.jakx_title}</i></h2>
@@ -99,7 +99,7 @@ const Recommend = () => {
             
             <div className="recommendation" data-aos="fade-right">
                 <div className="rec_image_container">
-                    <img className="rec_image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSVjj_nwRuOB4njCwgFGPHO2ZhhImRZu8Z7sYxhVz-o6cIl3uiG" draggable="false" />
+                    <img className="rec_image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSVjj_nwRuOB4njCwgFGPHO2ZhhImRZu8Z7sYxhVz-o6cIl3uiG" alt="HBO's The Last of Us Poster" draggable="false" />
                 </div>
                 <div className="title_author">
                     <h2>HBO's <i>{strings.tlouhbo_title}</i></h2>
@@ -112,7 +112,7 @@ const Recommend = () => {
 
             <div className="recommendation" data-aos="fade-right">
                 <div className="rec_image_container">
-                    <img className="rec_image" src="https://upload.wikimedia.org/wikipedia/en/7/7e/Fullmetal_Alchemist_Brotherhood_key_visual.png" draggable="false" />
+                    <img className="rec_image" src="https://upload.wikimedia.org/wikipedia/en/7/7e/Fullmetal_Alchemist_Brotherhood_key_visual.png" alt="Fullmetal Alchemist Brotherhood Poster" draggable="false" />
                 </div>
                 <div className="title_author">
                     <h2><i>{strings.fmab_title}</i></h2>

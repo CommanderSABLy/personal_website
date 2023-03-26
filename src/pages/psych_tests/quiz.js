@@ -129,7 +129,7 @@ const onClickReturn = () => {
 }
 
 const resetBackground = () => {
-  {document.body.style.backgroundImage = 'url("./image/ninetysecond_infantry.jpg")'}
+  document.body.style.backgroundImage = 'url("./image/ninetysecond_infantry.jpg")'
 }
 
   const addLeadingZero = (number) => (number > 9 ? number : `0${number}`)
