@@ -65,7 +65,14 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 16px;
-  box-shadow: -15px 15px 10px rgba(82, 82, 82, 0.45)
+  box-shadow: -15px 15px 10px rgba(82, 82, 82, 0.45);
+  transition: height 350ms ease, width 350ms ease, box-shadow 350ms ease;
+}
+
+.about-box:hover, .recommend-box:hover, .gallery-box:hover, .scale-box:hover, .contact-box:hover {
+    height: 33vmin;
+    width: 33vmin;
+    box-shadow: -45px 45px 30px rgba(82, 82, 82, 0.45);
 }
 
 .about-box {
