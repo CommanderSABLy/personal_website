@@ -16,9 +16,21 @@ const Recommend = () => {
         <div className="recommendation_container">
             {resetBackground()}
 
-            <h1>Get to know me</h1>
-            <p>One of the best ways to get to know someone is by finding out the kinds of things they like. Here are some of the things I liked enough to tell you to try it</p>
-            <div className="filler"></div>
+            <div className="filler">
+                <h3>Scroll to see what I recommend</h3>
+                <div className="caret-container">
+                    <i className="fas fa-caret-down fa-beat-fade fa-2xl" />
+                    <i className="fas fa-caret-down fa-beat-fade fa-2xl" />
+                    <i className="fas fa-caret-down fa-beat-fade fa-2xl" />
+                    <i className="fas fa-caret-down fa-beat-fade fa-2xl" />
+                    <i className="fas fa-caret-down fa-beat-fade fa-2xl" />
+                    <i className="fas fa-caret-down fa-beat-fade fa-2xl" />
+                    <i className="fas fa-caret-down fa-beat-fade fa-2xl" />
+                    <i className="fas fa-caret-down fa-beat-fade fa-2xl" />
+                    <i className="fas fa-caret-down fa-beat-fade fa-2xl" />
+                    <i className="fas fa-caret-down fa-beat-fade fa-2xl" />
+                </div>
+            </div>
            
             
             <h1>

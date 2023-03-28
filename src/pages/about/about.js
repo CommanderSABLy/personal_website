@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import "../../App.css"
 const strings = require("./about.json")
 
 const About = () => {
@@ -11,59 +12,120 @@ const About = () => {
         if (newWindow) newWindow.opener = null;
       }
     return (
-        <div>
+        <div className="about">
             {resetBackground()}
-            <h1>tldr</h1>
-            <p>{strings.tldr}</p>
-            
-            <h1>Why Computer Science?</h1>
-            <p>{strings.why_cs}</p>
-            
-            <h1>Why History?</h1>
-            <p>{strings.why_hist}</p>
+            <div className="bio-container">
+              <div className="bio-image-container">
+                <h1>Saul Michael Lynn</h1>
+                <img className="bio-image" src="image/grad_stage.jpg" alt="Saul on stage at graduation" draggable="false" />
+              </div>
+              <div className="bio">
+                <h2>Brief Bio</h2>
+                <p>{strings.bio}</p>
+              </div>
+              <div className="ycs">
+                <h2>Why Computer Science?</h2>
+                <p>{strings.why_cs}</p>
+              </div>
+              <div className="yh">
+                <h2>Why History?</h2>
+                <p>{strings.why_hist}</p>
+              </div>
+            </div>
             
             <h1>Computer Science Interests</h1>
-            <h2>Evolutionary Algorithms</h2>
-            <p>{strings.evo_alg}</p>
-            
-            <h2>Game Development</h2>
-            <p>{strings.game_dev}</p>
-            
-            <h2>UI Development</h2>
-            <p>{strings.ui_dev}</p>
-            
-            <h2>Digital Forensics</h2>
-            <p>{strings.dig_for}</p>
-            
-            <h2>Data Mining</h2>
-            <p>{strings.mining}</p>
-            
-            <h2>Cryptography</h2>
-            <p>{strings.crypto}</p>
-            
+            <div className="interest-container">
+              <div className="interest">
+                <h2>Evolutionary Algorithms</h2>
+                <p>{strings.evo_alg}</p>
+              </div>
+              
+              <div className="interest">
+                <h2>Game Development</h2>
+                <p>{strings.game_dev}</p>
+              </div>
+
+              <div className="interest">
+                <h2>UI Development</h2>
+                <p>{strings.ui_dev}</p>
+              </div>
+
+              <div className="interest">
+                <h2>Digital Forensics</h2>
+                <p>{strings.dig_for}</p>
+              </div>
+              
+              <div className="interest">
+                <h2>Data Mining</h2>
+                <p>{strings.mining}</p>
+              </div>
+              
+              <div className="interest">
+                <h2>Cryptography</h2>
+                <p>{strings.crypto}</p>
+              </div>
+            </div>
+
             <h1>Projects</h1>
-            
-            <h2>Evolutionary Keyboard Layout Generator</h2>
-            <p>{strings.evo_key}</p>
-            <p><Link href="#" onClick = {() => openInNewTab('https://tinyurl.com/2wvz8bvy/')}>Repository</Link></p>
-            
-            <h2>Data Mining Group Project</h2>
-            <p>{strings.data_mine}</p>
-            <iframe src="./image/CS5402_HW7_RyanMaxwell_SaulLynn.pdf" height="550" width="425" title="resume"/>
-            
-            <h2>Psychology Scales Assessment Tool</h2>
-            <p>{strings.psych}</p>
-            <p><Link href="#" onClick = {() => openInNewTab('https://tinyurl.com/2p96k8rc')}>Repository</Link></p>
-            
-            <h2>Fizzbuzz</h2>
-            <p>{strings.fizzbuzz}</p>
-            <p><Link href="#" onClick = {() => openInNewTab('https://tinyurl.com/3fcuux5x')}>Repository</Link></p>
-            
-            <h2>Unity</h2>
-            <p>{strings.unity}</p>
+            <div className="project-container">
+              <div className="project">
+                <div className="project-text">
+                  <h2>Evolutionary Keyboard Layout Generator</h2>
+                  <p>{strings.evo_key}</p>
+                </div>
+                <div className="project-visual">
+                  <img className="project-image" src="image/evolutionary_keyboard.JPG" alt="Evolutionary Keyboard Output" draggable="false" />
+                  <p><Link className="repo" href="#" onClick = {() => openInNewTab('https://tinyurl.com/2wvz8bvy/')}>Repository</Link></p>
+                </div>
+              </div>
+              
+              <div className="project">
+                <div className="project-text">
+                  <h2>Data Mining Group Project</h2>
+                  <p>{strings.data_mine}</p>
+                </div>
+                <div className="project-visual">
+                  <iframe src="./image/CS5402_HW7_RyanMaxwell_SaulLynn.pdf" height="550" width="425" title="resume"/>
+                </div>
+              </div>
+              
+              <div className="project">
+                <div className="project-text">
+                  <h2>Psychology Scales Assessment Tool</h2>
+                  <p>{strings.psych}</p>
+                </div>
+                <div className="project-visual">
+                  <img className="project-image" src="image/psych_scales.jpg" alt="Psych Scales Menu" draggable="false" />
+                  <p><Link className="repo" href="#" onClick = {() => openInNewTab('https://tinyurl.com/2p96k8rc')}>Repository</Link></p>
+                </div>
+              </div>
+
+              <div className="project">
+                <div className="project-text">
+                  <h2>Fizzbuzz</h2>
+                  <p>{strings.fizzbuzz}</p>
+                </div>
+                <div className="project-visual">
+                  <img className="project-image" src="image/csharp_fizzbuzz_output.JPG" alt="Output for my implementation of FizzBuzz in C#" draggable="false" />
+                  <p><Link className="repo" href="#" onClick = {() => openInNewTab('https://tinyurl.com/3fcuux5x')}>Repository</Link></p>
+                </div>
+              </div>
+              
+              <div className="project">
+                <div className="project-text">
+                  <h2>Unity</h2>
+                  <p>{strings.unity}</p>
+                </div>
+                <div className="project-visual">
+                  <h1><i className="fab fa-unity"></i></h1>
+                  <p><Link className="repo" href="#" onClick = {() => openInNewTab('https://tinyurl.com/3fcuux5x')}>Repository</Link></p>
+                </div>
+              </div>
+
+            </div>
 
             <h2>Resume</h2>
-            <iframe src="./image/resume.pdf" height="550" width="850" title="resume"/>
+            <iframe className="resume" src="./image/resume.pdf" title="resume"/>
         </div>
     )
 }
