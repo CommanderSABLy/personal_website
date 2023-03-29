@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import "../../App.css"
 const strings = require("./about.json")
 
@@ -11,6 +13,19 @@ const About = () => {
         const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
         if (newWindow) newWindow.opener = null;
       }
+      const intersect_ref = useRef();
+      const [isVisible, setIsVisible] = useState(false)
+      useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+          const entry = entries[0]
+          setIsVisible(entry.isIntersecting)
+        })
+        observer.observe(intersect_ref.current)
+      }, [])
+      useEffect(() => {
+        AOS.init({duration: 1500});
+      }, [])
+
     return (
         <div className="about">
             {resetBackground()}
@@ -37,38 +52,38 @@ const About = () => {
             <div className="interest-container">
               <div className="interest">
                 <h2>Evolutionary Algorithms</h2>
-                <p>{strings.evo_alg}</p>
+                <p ref={intersect_ref} className={isVisible ? "interest-active" : ""}>{strings.evo_alg}</p>
               </div>
               
               <div className="interest">
                 <h2>Game Development</h2>
-                <p>{strings.game_dev}</p>
+                <p className={isVisible ? "interest-active" : ""}>{strings.game_dev}</p>
               </div>
 
               <div className="interest">
                 <h2>UI Development</h2>
-                <p>{strings.ui_dev}</p>
+                <p className={isVisible ? "interest-active" : ""}>{strings.ui_dev}</p>
               </div>
 
               <div className="interest">
                 <h2>Digital Forensics</h2>
-                <p>{strings.dig_for}</p>
+                <p className={isVisible ? "interest-active" : ""}>{strings.dig_for}</p>
               </div>
               
               <div className="interest">
                 <h2>Data Mining</h2>
-                <p>{strings.mining}</p>
+                <p className={isVisible ? "interest-active" : ""}>{strings.mining}</p>
               </div>
               
               <div className="interest">
                 <h2>Cryptography</h2>
-                <p>{strings.crypto}</p>
+                <p className={isVisible ? "interest-active" : ""}>{strings.crypto}</p>
               </div>
             </div>
 
             <h1>Projects</h1>
             <div className="project-container">
-              <div className="project">
+              <div className="project" data-aos="fade-right">
                 <div className="project-text">
                   <h2>Evolutionary Keyboard Layout Generator</h2>
                   <p>{strings.evo_key}</p>
@@ -79,7 +94,7 @@ const About = () => {
                 </div>
               </div>
               
-              <div className="project">
+              <div className="project" data-aos="fade-left">
                 <div className="project-text">
                   <h2>Data Mining Group Project</h2>
                   <p>{strings.data_mine}</p>
@@ -89,7 +104,7 @@ const About = () => {
                 </div>
               </div>
               
-              <div className="project">
+              <div className="project" data-aos="fade-right">
                 <div className="project-text">
                   <h2>Psychology Scales Assessment Tool</h2>
                   <p>{strings.psych}</p>
@@ -100,7 +115,7 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="project">
+              <div className="project" data-aos="fade-left">
                 <div className="project-text">
                   <h2>Fizzbuzz</h2>
                   <p>{strings.fizzbuzz}</p>
@@ -111,7 +126,7 @@ const About = () => {
                 </div>
               </div>
               
-              <div className="project">
+              <div className="project" data-aos="fade-up">
                 <div className="project-text">
                   <h2>Unity</h2>
                   <p>{strings.unity}</p>
