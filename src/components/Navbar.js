@@ -18,7 +18,7 @@ function Navbar() {
 
     return(
         <nav className="NavbarItems">
-            <h1 className="navbar-logo">Saul Lynn <span className='icon-grey'><i className="fas fa-code" />+<i className="fas fa-book-atlas" /></span></h1>
+            <h1 className="navbar-logo" onClick={() => handleSelect("/")}>Saul Lynn <span className='icon-grey'><i className="fas fa-code" />+<i className="fas fa-book-atlas" /></span></h1>
             <div className="menu-icon" onClick={handleClick}>
                 <i className={active ? 'fas fa-times' : 'fas fa-bars'}></i>
             </div>

@@ -200,6 +200,7 @@ export const RWA = {
     info: rwa_strings.info,
     img_credit: rwa_strings.image,
     citation: rwa_strings.citation,
+    img_explanation: rwa_strings.image_ex,
 }
 
 export const MRS = {
@@ -245,7 +246,8 @@ export const MRS = {
     ],
     info: mrs_strings.info,
     img_credit: mrs_strings.image,
-    citation: mrs_strings.citation
+    citation: mrs_strings.citation,
+    img_explanation: mrs_strings.image_ex,
 }
 
 export const SRS = {
@@ -296,5 +298,6 @@ export const SRS = {
     ],
     info: srs_strings.info,
     img_credit: srs_strings.image,
-    citation: srs_strings.citation
+    citation: srs_strings.citation,
+    img_explanation: srs_strings.image_ex,
 }

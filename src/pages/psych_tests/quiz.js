@@ -135,82 +135,94 @@ const resetBackground = () => {
   const addLeadingZero = (number) => (number > 9 ? number : `0${number}`)
 
   return (
-    <div className="quiz-container">
-      {testSelected ? (
-        <div>
-        {!showResult ? (
+    <div className="scale">
+      <div className="quiz-container">
+        {testSelected ? (
           <div>
-            {!showInfo ? (
+          {!showResult ? (
             <div>
+              {!showInfo ? (
               <div>
-                <span className="active-question-no">
-                  {addLeadingZero(activeQuestion + 1)}
-                </span>
-                <span className="total-question">
-                  /{addLeadingZero(questions.length)}
-                </span>
-              </div>
-              <h2>
-                {question}
-              </h2>
+                <div>
+                  <span className="active-question-no">
+                    {addLeadingZero(activeQuestion + 1)}
+                  </span>
+                  <span className="total-question">
+                    /{addLeadingZero(questions.length)}
+                  </span>
+                </div>
+                <h2>
+                  {question}
+                </h2>
 
-              <ul>
-                {choices.map((answer, index) =>(
-                  <li
-                  onClick={() => onAnswerSelected(answer, index, scoring)}
-                  key={answer}
-                  className={selectedAnswerIndex === index ? 'selected-answer' : null}>
-                  {answer}</li>
-                ))}
-              </ul>
-              <div className="flex-right">
-                <button onClick={onClickNext} disabled={selectedAnswerIndex === null}>{activeQuestion === questions.length - 1 ? 'Finish': 'Next'} </button>
-              </div>
-            </div>
-            ) : (
-              <div>
-                <h3>{topic}</h3>
-                <h2>{exam.info}</h2>
-                <p>{exam.citation}</p>
-                <p>{exam.img_credit}</p>
+                <ul>
+                  {choices.map((answer, index) =>(
+                    <li
+                    onClick={() => onAnswerSelected(answer, index, scoring)}
+                    key={answer}
+                    className={selectedAnswerIndex === index ? 'selected-answer' : null}>
+                    {answer}</li>
+                  ))}
+                </ul>
                 <div className="flex-right">
-                  <button onClick={onClickStart}>Start</button>
+                  <button onClick={onClickNext} disabled={selectedAnswerIndex === null}>{activeQuestion === questions.length - 1 ? 'Finish': 'Next'} </button>
                 </div>
               </div>
-            )}
+              ) : (
+                <div>
+                  <h3>{topic}</h3>
+                  <h2>{exam.info}</h2>
+                  <div className='cred'>
+                    <p>{exam.img_explanation}</p>
+                    <div className='image-credit'>
+                    <p>{exam.img_credit}</p>  
+                    </div>
+                    <p>{exam.citation}</p>
+                  </div>
+                  <div className="flex-right">
+                    <button onClick={onClickStart}>Start</button>
+                  </div>
+                </div>
+              )}
+            </div>
+          ) : (
+            <div className="result">
+              <h3>{topic} Score</h3>
+              <p>
+                Total Score:<span> {100 * ((result - exam.scored) / max_score).toPrecision(4)}%</span>
+              </p>
+              <p>
+                Total Questions: <span>{questions.length}</span>
+              </p>
+              <div className="flex-right">
+                <button onClick={onClickReturn}>Return to Menu</button>
+              </div>
+            </div>
+          )}
           </div>
         ) : (
-          <div className="result">
-            <h3>{topic} Score</h3>
-            <p>
-              Total Score:<span> {100 * ((result - exam.scored) / max_score).toPrecision(4)}%</span>
-            </p>
-            <p>
-              Total Questions: <span>{questions.length}</span>
-            </p>
-            <div className="flex-right">
-              <button onClick={onClickReturn}>Return to Menu</button>
-            </div>
+          <div>
+              {resetBackground()}
+              <h1>Choose your test</h1>
+
+              <ul>
+              {tests.map((test) =>(
+                <li
+                onClick={() => onTestSelect(test)}
+                key={test}>
+                {test}</li>
+              ))}
+              </ul>
+              <div className='cred'>
+                <p>The 92nd Infantry Division was an African-American infantry division of the US Army in the World Wars. This image is of their WW2 commanding general and some of the soldiers during an inspection. Black men that fought in WW2 helped defeat fascist dictatorships, the ultimate form of Right Wing Authoritarianism only to come home to rampant and systemic racism. The disparity in their treatment upon returning home helped fuel the civil rights movement of the following decades.</p>
+                <div className="image-credit">
+                  <p>Image credit: Office for Emergency Management. Office of War Information. Overseas Operations Branch. New York Office. News and Features Bureau., Public domain, via Wikimedia Commons</p>
+                </div>
+                  <p>You can find the tests for all these scales {reference}.</p>
+              </div>
           </div>
         )}
-        </div>
-      ) : (
-        <div>
-            {resetBackground()}
-            <h1>Choose your test</h1>
-
-            <ul>
-            {tests.map((test) =>(
-              <li
-              onClick={() => onTestSelect(test)}
-              key={test}>
-              {test}</li>
-            ))}
-            </ul>
-            <p>Image credit: Office for Emergency Management. Office of War Information. Overseas Operations Branch. New York Office. News and Features Bureau., Public domain, via Wikimedia Commons</p>
-            <p>You can find the tests for all these scales {reference}.</p>
-        </div>
-      )}
+      </div>
     </div>
   );
 }

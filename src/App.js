@@ -7,10 +7,11 @@ import Recommend from './pages/recommended_media/recommend';
 import Gallery from './pages/gallery/gallery';
 import Contact from './pages/contact/contact';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer'
 
 function App() {
     return (
-        <Router>
+        <Router className='App'>
             <Navbar />
             <Routes>
                 <Route path='/' exact element={<Home />} />
@@ -20,6 +21,7 @@ function App() {
                 <Route path='/gallery' element={<Gallery/>} />
                 <Route path='/contact' element={<Contact/>} />
             </Routes>
+            <Footer />
         </Router>
     )
 }

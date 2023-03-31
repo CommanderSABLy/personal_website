@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import "../../App.css"
@@ -90,7 +89,7 @@ const About = () => {
                 </div>
                 <div className="project-visual">
                   <img className="project-image" src="image/evolutionary_keyboard.JPG" alt="Evolutionary Keyboard Output" draggable="false" />
-                  <p><Link className="repo" href="#" onClick = {() => openInNewTab('https://tinyurl.com/2wvz8bvy/')}>Repository</Link></p>
+                  <button className="repo" href="#" onClick = {() => openInNewTab('https://tinyurl.com/2wvz8bvy/')}>Repository</button>
                 </div>
               </div>
               
@@ -111,7 +110,7 @@ const About = () => {
                 </div>
                 <div className="project-visual">
                   <img className="project-image" src="image/psych_scales.jpg" alt="Psych Scales Menu" draggable="false" />
-                  <p><Link className="repo" href="#" onClick = {() => openInNewTab('https://tinyurl.com/2p96k8rc')}>Repository</Link></p>
+                  <p><button className="repo" href="#" onClick = {() => openInNewTab('https://tinyurl.com/2p96k8rc')}>Repository</button></p>
                 </div>
               </div>
 
@@ -122,7 +121,7 @@ const About = () => {
                 </div>
                 <div className="project-visual">
                   <img className="project-image" src="image/csharp_fizzbuzz_output.JPG" alt="Output for my implementation of FizzBuzz in C#" draggable="false" />
-                  <p><Link className="repo" href="#" onClick = {() => openInNewTab('https://tinyurl.com/3fcuux5x')}>Repository</Link></p>
+                  <p><button className="repo" href="#" onClick = {() => openInNewTab('https://tinyurl.com/3fcuux5x')}>Repository</button></p>
                 </div>
               </div>
               
@@ -133,7 +132,7 @@ const About = () => {
                 </div>
                 <div className="project-visual">
                   <h1><i className="fab fa-unity"></i></h1>
-                  <p><Link className="repo" href="#" onClick = {() => openInNewTab('https://tinyurl.com/3fcuux5x')}>Repository</Link></p>
+                  <p><button className="repo" href="#" onClick = {() => openInNewTab('https://tinyurl.com/3fcuux5x')}>Repository</button></p>
                 </div>
               </div>
 
