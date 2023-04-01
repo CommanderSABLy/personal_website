@@ -88,7 +88,7 @@ const About = () => {
                   <p>{strings.evo_key}</p>
                 </div>
                 <div className="project-visual">
-                  <img className="project-image" src="image/evolutionary_keyboard.JPG" alt="Evolutionary Keyboard Output" draggable="false" />
+                  <img className="project-image" src="image/evolutionary_keyboard.jpg" alt="Evolutionary Keyboard Output" draggable="false" />
                   <button className="repo" href="#" onClick = {() => openInNewTab('https://tinyurl.com/2wvz8bvy/')}>Repository</button>
                 </div>
               </div>
@@ -120,7 +120,7 @@ const About = () => {
                   <p>{strings.fizzbuzz}</p>
                 </div>
                 <div className="project-visual">
-                  <img className="project-image" src="image/csharp_fizzbuzz_output.JPG" alt="Output for my implementation of FizzBuzz in C#" draggable="false" />
+                  <img className="project-image" src="image/csharp_fizzbuzz_output.jpg" alt="Output for my implementation of FizzBuzz in C#" draggable="false" />
                   <p><button className="repo" href="#" onClick = {() => openInNewTab('https://tinyurl.com/3fcuux5x')}>Repository</button></p>
                 </div>
               </div>
