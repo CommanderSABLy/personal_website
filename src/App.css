@@ -263,6 +263,7 @@ body {
     height: 56vmin;
     object-fit: cover;
     object-position: 100% 50%;
+    z-index: 2;
 }
 
 #image-track {
@@ -298,6 +299,7 @@ body {
   border-radius: 16px;
   box-shadow: -15px 15px 10px rgba(82, 82, 82, 0.45);
   transition: height 350ms ease, width 350ms ease, box-shadow 350ms ease;
+  z-index: 2;
 }
 
 .about-box:hover, .recommend-box:hover, .gallery-box:hover, .scale-box:hover, .contact-box:hover {
