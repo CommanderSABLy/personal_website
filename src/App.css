@@ -764,13 +764,13 @@ body {
     font-size: 1rem;
 }
 
-.nav-links {
+.nav-links, .foot-links {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
 }
 
-.nav-links:hover {
+.nav-links:hover, .foot-links:hover {
     background-color: #33501c;
     border-radius: 8px;
     transition: all 0.2s ease-out;
@@ -811,16 +811,19 @@ body {
         z-index: 9999;
     }
 
-    .nav-links {
+    .nav-links, .foot-links {
         text-align: center;
-        padding: 2rem;
         width: 100%;
         display: table;
     }
 
-    .nav-links:hover {
+    .nav-links {
+        padding: 1.9rem;
+    }
+
+    .nav-links:hover, .foot-links:hover {
         background-color: #2D4130;
-        border-radius: 0;
+        border-radius: 8px;
     }
 
     .navbar-logo {
