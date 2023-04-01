@@ -35,16 +35,16 @@ export const FooterItems = [
     {
         title: 'Home',
         url: '/',
-        cName: 'nav-links'
+        cName: 'foot-links'
     },
     {
         title: 'About',
         url: '/about',
-        cName: 'nav-links'
+        cName: 'foot-links'
     },
     {
         title: 'Contact',
         url: '/contact',
-        cName: 'nav-links'
+        cName: 'foot-links'
     },
 ]
