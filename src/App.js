@@ -6,6 +6,7 @@ import About from './pages/about/about';
 import Recommend from './pages/recommended_media/recommend';
 import Gallery from './pages/gallery/gallery';
 import Contact from './pages/contact/contact';
+import Contacted from './pages/contact/contacted';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer'
 
@@ -20,6 +21,7 @@ function App() {
                 <Route path='/recommended-media' element={<Recommend/>} />
                 <Route path='/gallery' element={<Gallery/>} />
                 <Route path='/contact' element={<Contact/>} />
+                <Route path='/contact-email-sent' element={<Contacted/>} />
             </Routes>
             <Footer />
         </Router>

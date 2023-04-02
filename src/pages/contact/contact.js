@@ -25,6 +25,7 @@ const Contact = () => {
                 <form className="row g-3" action="https://formsubmit.co/5ef92ad9a679167158bc88f4e7261b6f" method="POST">
                     <input type="text" name="_honey" style={{display: 'none'}}></input>
                     <input type="hidden" name="_captcha" value="false"></input>
+                    <input type="hidden" name="_next" value="saullynn.com/contact-email-sent" />
                     <div className="col-md-6">
                         <label for="firstName" className="form-label">First Name<span className="asterisk">*</span></label>
                         <input type="text" className="form-control" name="Name" id="firstName" placeholder="John" required />
