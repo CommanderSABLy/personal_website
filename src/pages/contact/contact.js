@@ -22,14 +22,16 @@ const Contact = () => {
                     <h3><Link className="linker" href="#" onClick = {() => openInNewTab('https://tinyurl.com/mr2uevja')}><i className="fa-brands fa-github"/> GitHub</Link></h3>
                     <h3>Contact Me Directly</h3>
                 </div>
-                <form className="row g-3" action="https://formsubmit.co/saullynn.lynn@gmail.com" method="POST">
+                <form className="row g-3" action="https://formsubmit.co/5ef92ad9a679167158bc88f4e7261b6f" method="POST">
+                    <input type="text" name="_honey" style={{display: 'none'}}></input>
+                    <input type="hidden" name="_captcha" value="false"></input>
                     <div className="col-md-6">
                         <label for="firstName" className="form-label">First Name<span className="asterisk">*</span></label>
-                        <input type="text" className="form-control" name="name" id="firstName" placeholder="John" required />
+                        <input type="text" className="form-control" name="Name" id="firstName" placeholder="John" required />
                     </div>
                     <div className="col-md-6">
                         <label for="lastName" className="form-label">Last Name<span className="asterisk">*</span></label>
-                        <input type="text" className="form-control" name="Last Name" id="lastName" placeholder="Doe" required />
+                        <input type="text" className="form-control" name="Surname" id="lastName" placeholder="Doe" required />
                     </div>
                     <div className="col-md-8">
                         <label for="emailInfo" className="form-label">Email<span className="asterisk">*</span></label>
