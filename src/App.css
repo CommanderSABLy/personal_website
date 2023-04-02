@@ -368,7 +368,8 @@ body {
 }
 
 .contact-container {
-    min-height: 80.39vh;
+    min-height: 78.68vh;
+    margin-bottom: 1rem;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100;200;300;400;500;600;700;800&display=swap');

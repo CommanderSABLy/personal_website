@@ -22,7 +22,7 @@ const Contact = () => {
                     <h3><Link className="linker" href="#" onClick = {() => openInNewTab('https://tinyurl.com/mr2uevja')}><i className="fa-brands fa-github"/> GitHub</Link></h3>
                     <h3>Contact Me Directly</h3>
                 </div>
-                <form className="row g-3" action="https://formsubmit.co/" method="POST">
+                <form className="row g-3" action="https://formsubmit.co/saullynn.lynn@gmail.com" method="POST">
                     <div className="col-md-6">
                         <label for="firstName" className="form-label">First Name<span className="asterisk">*</span></label>
                         <input type="text" className="form-control" name="name" id="firstName" placeholder="John" required />
