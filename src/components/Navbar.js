@@ -13,6 +13,7 @@ function Navbar() {
     const navigate = useNavigate();
 
     function handleSelect(location) {
+        setActive(false)
         navigate(location)
     }
 
