@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from "react";
-import { isMobile } from "react-device-detect";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import "../../App.css"
@@ -13,14 +12,39 @@ const About = () => {
         const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
         if (newWindow) newWindow.opener = null;
       }
-      const intersect_ref = useRef();
-      const [isVisible, setIsVisible] = useState(false)
+      const evo_ref = useRef();
+      const ui_ref = useRef();
+      const digfor_ref = useRef();
+      const mining_ref = useRef();
+      const [evoVis, setEvoVis] = useState(false);
+      const [uiVis, setUiVis] = useState(false);
+      const [digforVis, setDigforVis] = useState(false);
+      const [miningVis, setMiningVis] = useState(false);
       useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-          const entry = entries[0]
-          setIsVisible(entry.isIntersecting)
+        const evo_observer = new IntersectionObserver((entries) => {
+          entries.forEach(function (entry) {
+            setEvoVis(entry.isIntersecting)
+          })
         })
-        observer.observe(intersect_ref.current)
+        const ui_observer = new IntersectionObserver((entries) => {
+          entries.forEach(function (entry) {
+            setUiVis(entry.isIntersecting)
+          })
+        })
+        const digfor_observer = new IntersectionObserver((entries) => {
+          entries.forEach(function (entry) {
+            setDigforVis(entry.isIntersecting)
+          })
+        })
+        const mining_observer = new IntersectionObserver((entries) => {
+          entries.forEach(function (entry) {
+            setMiningVis(entry.isIntersecting)
+          })
+        })
+        evo_observer.observe(evo_ref.current)
+        ui_observer.observe(ui_ref.current)
+        digfor_observer.observe(digfor_ref.current)
+        mining_observer.observe(mining_ref.current)
       }, [])
       useEffect(() => {
         AOS.init({duration: 1500});
@@ -50,34 +74,34 @@ const About = () => {
             
             <h1>Computer Science Interests</h1>
             <div className="interest-container">
-              <div className="interest">
+              <div ref={evo_ref} className="interest">
                 <h2>Evolutionary Algorithms</h2>
-                <p className={isVisible ? "interest-active" : ""}>{strings.evo_alg}</p>
+                <p className={evoVis ? "interest-active" : ""}>{strings.evo_alg}</p>
               </div>
               
               <div className="interest">
                 <h2>Game Development</h2>
-                <p className={isVisible ? "interest-active" : ""}>{strings.game_dev}</p>
+                <p className={evoVis ? "interest-active" : ""}>{strings.game_dev}</p>
               </div>
 
-              <div className="interest">
+              <div ref={ui_ref} className="interest">
                 <h2>UI Development</h2>
-                <p ref={intersect_ref} className={isVisible ? "interest-active" : ""}>{strings.ui_dev}</p>
+                <p className={uiVis ? "interest-active" : ""}>{strings.ui_dev}</p>
               </div>
 
-              <div className="interest">
+              <div ref={digfor_ref} className="interest">
                 <h2>Digital Forensics</h2>
-                <p className={isVisible ? "interest-active" : ""}>{strings.dig_for}</p>
+                <p className={digforVis ? "interest-active" : ""}>{strings.dig_for}</p>
               </div>
               
-              <div className="interest">
+              <div ref={mining_ref} className="interest">
                 <h2>Data Mining</h2>
-                <p className={isVisible ? "interest-active" : ""}>{strings.mining}</p>
+                <p className={miningVis ? "interest-active" : ""}>{strings.mining}</p>
               </div>
               
               <div className="interest">
                 <h2>Cryptography</h2>
-                <p className={isVisible ? "interest-active" : ""}>{strings.crypto}</p>
+                <p className={miningVis ? "interest-active" : ""}>{strings.crypto}</p>
               </div>
             </div>
 
