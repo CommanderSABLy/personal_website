@@ -288,7 +288,7 @@ body {
     background-color: black;
 }
 
-.about-box, .recommend-box, .gallery-box, .scale-box, .contact-box {
+.about-box, .recommend-box, .gallery-box, .scale-box, .contact-box, .about-box-mobile, .recommend-box-mobile, .gallery-box-mobile, .scale-box-mobile, .contact-box-mobile {
   height: 30vmin;
   width: 30vmin;
   margin: 5vmin;
@@ -306,34 +306,47 @@ body {
     box-shadow: -45px 45px 30px rgba(82, 82, 82, 0.45);
 }
 
-.about-box {
+.about-box-mobile, .recommend-box-mobile, .gallery-box-mobile, .scale-box-mobile, .contact-box-mobile {
+    text-align: center;
+    justify-content: center;
+    box-shadow: none;
+}
+
+.about-box-mobile, .recommend-box-mobile, .gallery-box-mobile, .scale-box-mobile, .contact-box-mobile h3{
+    color: #33501c;
+    -webkit-text-stroke: 0.5px #ffffff;
+}
+
+.about-box, .about-box-mobile {
   background-image: url("../public/image/grad_walk.jpg");
   background-size: 275%;
   background-position: 50% 50%;
   margin-bottom: 10vmin;
 }
 
-.recommend-box {
+.recommend-box, .recommend-box-mobile {
   background-image: url("https://upload.wikimedia.org/wikipedia/en/7/74/The_Last_Stand_of_the_Tin_Can_Sailors.jpg");
   background-size: cover;
   margin-bottom: 10vmin;
 }
 
-.gallery-box {
+.gallery-box, .gallery-box-mobile {
   background-image: url('../public/image/gallery/aryasnow.jpg');
   background-size: cover;
   background-position: 25% 0%;
   margin-bottom: 10vmin;
 }
 
-.scale-box {
+.scale-box, .scale-box-mobile {
   background-image: url("../public/image/ninetysecond_infantry.jpg");
   background-size: cover;
+  margin-bottom: 10vmin;
 }
 
-.contact-box {
+.contact-box, .contact-box-mobile {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PEPmWe92UMQHUMfIF-dWuLP_2cp-7QdteA&usqp=CAU");
   background-size: cover;
+  margin-bottom: 10vmin;
 }
 
 .effect {
@@ -526,7 +539,7 @@ body {
       flex-direction: row;
       justify-content: center;
     }
-    
+
     .recommendation_container {
         display: flex;
         flex-direction: column;
@@ -603,21 +616,25 @@ body {
 @media (max-width: 600px){
     
     .home {
-        background-color: #000000;
-        justify-content: center;
-        margin: 0 auto;
-        padding: 0 0px;
-        min-height: 85.51vh;
+        background-color: #1c1c1c;
+        min-height: 90vh;
         width: 100vw;
+        margin-bottom: 5rem;
         display: flex;
         flex-direction: row;
         z-index: 1;
+        color: white;
+        text-align: center;
       }
     
     .home-container {
       display: flex;
       flex-direction: column;
       justify-content: center;
+    }
+
+    .scale-box p {
+        font-size: .8rem;
     }
 
     .recommendation_container {
@@ -644,22 +661,24 @@ body {
     .title_author {
         grid-column-start: 1;
         grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
         gap: 0rem;
     }
 
     .rec {
         grid-column-start: 1;
         grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
     }
 
     .rec_image_container {
         display: grid;
         grid-column-start: 1;
         grid-column-end: 2;
-        grid-row-start: 3;
-        grid-row-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
         align-items: center;
         justify-items: center;
     }
@@ -851,8 +870,8 @@ body {
 
     .bio-container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: fit-content;
         grid-gap: 1rem;
         margin-top: 2rem;
         margin-bottom: 4rem;
@@ -862,9 +881,32 @@ body {
     .bio-image-container {
         display: grid;
         justify-self: center;
+        margin-bottom: 3rem;
         grid-row-start: 1;
         grid-column-start: 1;
         grid-row-end: 2;
         grid-column-end: 2;
     }
+
+    .interest-container {
+        display: grid;
+        width: 90vw;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 2vw;
+        margin-bottom: 2rem;
+    }
+
+    .project {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 80vw;
+        background-color: #253625;
+        outline: 2px solid white;
+        align-items: center;
+        border-radius: 16px;
+        /*box-shadow: -20px 20px 10px rgba(82, 82, 82, 0.45);*/
+    }
+    
 }

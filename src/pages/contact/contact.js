@@ -11,7 +11,7 @@ const Contact = () => {
         if (newWindow) newWindow.opener = null;
       }
     return (
-        <div class="contact-container">
+        <div className="contact-container">
             <div className="container mt-5">
                 {resetBackground()}
                 <div className="contact">
