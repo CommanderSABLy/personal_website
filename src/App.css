@@ -146,6 +146,7 @@ body {
     display: grid;
     padding: 10px;
     justify-items: center;
+    max-width: 100%;
 }
 
 .project-image {
