@@ -60,25 +60,25 @@ const Home = () => {
             <div className='home'>
                     {resetBackground()}
                     <div className="home-container">
-                        <div>
+                        <div className="mobile-container">
                             <div className="about-box-mobile" onClick={() => handleClick('/about')} />
                             <h3>About</h3>
                         </div>
-                        <div>
+                        <div className="mobile-container">
                             <div className="recommend-box-mobile" onClick={() => handleClick('/recommended-media')} />
-                            <h3>Recommended Media</h3>
+                            <h3>Recommended</h3>
                         </div>
-                        <div>
+                        <div className="mobile-container">
                             <div className="gallery-box-mobile" onClick={() => handleClick('/gallery')} />
                             <h3>Gallery</h3>
                         </div>
                     </div>
                     <div className="home-container">
-                        <div>
+                        <div className="mobile-container">
                             <div className="scale-box-mobile" onClick={() => handleClick('/scales')} />
                             <h3>Scales</h3>
                         </div>
-                        <div>
+                        <div className="mobile-container">
                             <div className="contact-box-mobile" onClick={() => handleClick('/contact')} />
                             <h3>Contact Me</h3>
                         </div>

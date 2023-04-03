@@ -307,14 +307,12 @@ body {
 }
 
 .about-box-mobile, .recommend-box-mobile, .gallery-box-mobile, .scale-box-mobile, .contact-box-mobile {
-    text-align: center;
-    justify-content: center;
     box-shadow: none;
 }
 
-.about-box-mobile, .recommend-box-mobile, .gallery-box-mobile, .scale-box-mobile, .contact-box-mobile h3{
-    color: #33501c;
-    -webkit-text-stroke: 0.5px #ffffff;
+.mobile-container {
+    text-align: center;
+    width: 100%;
 }
 
 .about-box, .about-box-mobile {
@@ -625,6 +623,7 @@ body {
         z-index: 1;
         color: white;
         text-align: center;
+        justify-content: center;
       }
     
     .home-container {
