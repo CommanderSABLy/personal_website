@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import { isMobile } from "react-device-detect";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import "../../App.css"
@@ -99,7 +100,7 @@ const About = () => {
                   <p>{strings.data_mine}</p>
                 </div>
                 <div className="project-visual">
-                  <iframe src="./image/CS5402_HW7_RyanMaxwell_SaulLynn.pdf" height="550" width="425" title="Data Mining Report"/>
+                  <iframe className="project-pdf" src="./image/CS5402_HW7_RyanMaxwell_SaulLynn.pdf" title="Data Mining Report"/>
                 </div>
               </div>
               
