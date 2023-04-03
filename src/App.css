@@ -221,12 +221,20 @@ body {
         height: 550px;
         width: 850px;
     }
+    .project-pdf {
+        height: 550px;
+        width: 425px
+    }
 }
 
 @media (max-width: 850px) {
     .resume {
-        height: 550;
+        height: 550px;
         width: 90vw;
+    }
+    .project-pdf {
+        height: 550px;
+        width: 75vw;
     }
 }
 

@@ -100,7 +100,7 @@ const About = () => {
                   <p>{strings.data_mine}</p>
                 </div>
                 <div className="project-visual">
-                  <iframe src="./image/CS5402_HW7_RyanMaxwell_SaulLynn.pdf" height={!isMobile ? "550" : "50vw"} width={!isMobile ? "425" : "50vw"} title="Data Mining Report"/>
+                  <iframe className="project-pdf" src="./image/CS5402_HW7_RyanMaxwell_SaulLynn.pdf" title="Data Mining Report"/>
                 </div>
               </div>
               
