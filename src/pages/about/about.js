@@ -51,7 +51,7 @@ const About = () => {
             <div className="interest-container">
               <div className="interest">
                 <h2>Evolutionary Algorithms</h2>
-                <p ref={intersect_ref} className={isVisible ? "interest-active" : ""}>{strings.evo_alg}</p>
+                <p className={isVisible ? "interest-active" : ""}>{strings.evo_alg}</p>
               </div>
               
               <div className="interest">
@@ -61,7 +61,7 @@ const About = () => {
 
               <div className="interest">
                 <h2>UI Development</h2>
-                <p className={isVisible ? "interest-active" : ""}>{strings.ui_dev}</p>
+                <p ref={intersect_ref} className={isVisible ? "interest-active" : ""}>{strings.ui_dev}</p>
               </div>
 
               <div className="interest">
@@ -99,7 +99,7 @@ const About = () => {
                   <p>{strings.data_mine}</p>
                 </div>
                 <div className="project-visual">
-                  <iframe src="./image/CS5402_HW7_RyanMaxwell_SaulLynn.pdf" height="550" width="425" title="resume"/>
+                  <iframe src="./image/CS5402_HW7_RyanMaxwell_SaulLynn.pdf" height="550" width="425" title="Data Mining Report"/>
                 </div>
               </div>
               
