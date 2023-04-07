@@ -55,7 +55,6 @@ const About = () => {
             {resetBackground()}
             <div className="bio-container">
               <div className="bio-image-container">
-                <h1>Saul Michael Lynn</h1>
                 <img className="bio-image" src="image/grad_stage.jpg" alt="Saul on stage at graduation" draggable="false" />
               </div>
               <div className="bio">
@@ -157,7 +156,10 @@ const About = () => {
                 </div>
                 <div className="project-visual">
                   <h1><i className="fab fa-unity"></i></h1>
-                  <p><button className="repo" href="#" onClick = {() => openInNewTab('https://tinyurl.com/3fcuux5x')}>Repository</button></p>
+                  <span className="site-repo">
+                    <p><button className="repo" href="#" onClick = {() => openInNewTab('https://tinyurl.com/2p8depz8')}>Project Seraph</button></p>
+                    <p><button className="repo" href="#" onClick = {() => openInNewTab('https://tinyurl.com/mbhxhap9')}>Repository</button></p>
+                  </span>
                 </div>
               </div>
 

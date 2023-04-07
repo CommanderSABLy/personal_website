@@ -6,7 +6,7 @@ export const MenuItems = [
     },
     {
         title: 'ChatGPT',
-        url: '/about',
+        url: '/on-chat-gpt',
         cName: 'nav-links'
     },
     {
