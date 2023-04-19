@@ -12,19 +12,21 @@ function Navbar() {
     }
 
     return(
-        <nav className="FootItems">
-            <ul className='foot-menu'>
-                {FooterItems.map((item, index) => {
-                    return (
-                        <li key={index}>
-                            <div className={item.cName} onClick={() => handleSelect(item.url)}>
-                                {item.title}
-                            </div>
-                        </li>
-                    )
-                })}
-            </ul>
-        </nav>
+        <footer>
+            <nav className="FootItems">
+                <ul className='foot-menu'>
+                    {FooterItems.map((item, index) => {
+                        return (
+                            <li key={index}>
+                                <div className={item.cName} onClick={() => handleSelect(item.url)}>
+                                    {item.title}
+                                </div>
+                            </li>
+                        )
+                    })}
+                </ul>
+            </nav>
+        </footer>
     )
 }
 
