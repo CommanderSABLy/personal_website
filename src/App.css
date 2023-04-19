@@ -66,6 +66,12 @@ body {
 
 .gpt h1, h2, h3 {
     text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.gpt h1 {
+    font-size: 4rem;
 }
 
 .gpt iframe {
@@ -79,8 +85,8 @@ body {
     color: #dddddd;
     font-size: 1.5rem;
     font-style: italic;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
 }
 
 .quote-attr {
@@ -99,10 +105,12 @@ body {
 }
 
 .gpt-content p{
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
     text-indent: 2em;
     font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .video {
