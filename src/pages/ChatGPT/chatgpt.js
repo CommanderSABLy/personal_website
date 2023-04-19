@@ -1,7 +1,7 @@
 import React from "react";
 import "../../App.css";
 import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
-import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { dark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 const strings = require("./chatgpt.json")
 
 const Chatgpt = () => {
@@ -24,11 +24,11 @@ const Chatgpt = () => {
                 <p>
                     {strings.can_it_code}
                 </p>
-                <span className="content-container"><SyntaxHighlighter language="python" style={docco}>{strings.hardcoded}</SyntaxHighlighter></span>
+                <span className="content-container"><SyntaxHighlighter language="python" style={dark}>{strings.hardcoded}</SyntaxHighlighter></span>
                 <p>{strings.cic2}</p>
-                <span className="content-container"><SyntaxHighlighter language="python" style={docco}>{strings.improved}</SyntaxHighlighter></span>
+                <span className="content-container"><SyntaxHighlighter language="python" style={dark}>{strings.improved}</SyntaxHighlighter></span>
                 <p>{strings.cic3}</p>
-                <span className="content-container"><SyntaxHighlighter language="python" style={docco}>{strings.improved_v2}</SyntaxHighlighter></span>
+                <span className="content-container"><SyntaxHighlighter language="python" style={dark}>{strings.improved_v2}</SyntaxHighlighter></span>
                 <p>{strings.cic4}</p>
                 <h2>Is it going to replace developers?</h2>
                 <p>
@@ -45,9 +45,9 @@ const Chatgpt = () => {
                 <p>
                     {strings.why2}
                 </p>
-                <span className="content-container"><SyntaxHighlighter language="python" style={docco}>{strings.palindrome}</SyntaxHighlighter></span>
+                <span className="content-container"><SyntaxHighlighter language="python" style={dark}>{strings.palindrome}</SyntaxHighlighter></span>
                 <p>{strings.why3}</p>
-                <span className="content-container"><SyntaxHighlighter language="python" style={docco}>{strings.balancedSubstring}</SyntaxHighlighter></span>
+                <span className="content-container"><SyntaxHighlighter language="python" style={dark}>{strings.balancedSubstring}</SyntaxHighlighter></span>
                 <p>{strings.why4}</p>
                 <p>{strings.why5}</p>
                 <span className="content-container"><img src="image/gpt_chess_move.png" alt="The state of the chess board" draggable="false" /></span>
