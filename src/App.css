@@ -47,6 +47,10 @@ body {
     color: red;
 }
 
+.contact-container {
+    margin-bottom: 2rem;
+}
+
 .contact h3 {
     margin-top: 1rem;
     text-align: left;
@@ -80,6 +84,13 @@ body {
     margin-bottom: 1rem;
 }
 
+.gpt-img {
+    max-width: 80%;
+    max-height: 80%;
+    align-self: center;
+    border-radius: 16px;
+}
+
 .quote {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #dddddd;
@@ -102,6 +113,8 @@ body {
     background-color: #253625;
     color: white;
     margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .gpt-content p{
@@ -113,15 +126,40 @@ body {
     margin-bottom: 2rem;
 }
 
+.video-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.videoWrapper {
+    width: 40%;
+    margin-bottom: 1rem;
+}
+
 .video {
-    width: 40vw;
-    height: 22.5vw;
-    border-radius: 16px;
+    position: relative;
+    /*16:9 ratio*/
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .content-container {
     display: flex;
     justify-content: center;
+    padding-left: 7vw;
+    padding-right: 7vw;
+    border-radius: 16px;
 }
 
 .code {
@@ -212,7 +250,6 @@ body {
     outline: 2px solid white;
     align-items: center;
     border-radius: 16px;
-    /*box-shadow: -20px 20px 10px rgba(82, 82, 82, 0.45);*/
 }
 
 .project-visual {
@@ -255,7 +292,6 @@ body {
     outline: 2px solid white;
     border-radius: 16px;
     width: 100%;
-    /*box-shadow: -10px 10px 5px rgba(82, 82, 82, 0.45);*/
 }
 
 .bio p {
@@ -289,7 +325,6 @@ body {
     border-radius: 16px;
     object-fit: cover;
     object-position: 55% 0%;
-    /*box-shadow: 0 0 25px rgba(150, 150, 150, 0.55);*/
     outline: 1px solid white;
     margin-top: 5rem;
 }
@@ -375,25 +410,26 @@ body {
     background-color: black;
 }
 
-.about-box, .recommend-box, .gallery-box, .scale-box, .contact-box, .about-box-mobile, .recommend-box-mobile, .gallery-box-mobile, .scale-box-mobile, .contact-box-mobile {
-  height: 30vmin;
-  width: 30vmin;
-  margin: 5vmin;
-  margin-top: 0;
-  transform: translate(0%, 30%);
-  display: flex;
-  border-radius: 16px;
-  box-shadow: -15px 15px 10px rgba(82, 82, 82, 0.45);
-  transition: height 350ms ease, width 350ms ease, box-shadow 350ms ease;
+.about-box, .recommend-box, .gallery-box, .scale-box, .contact-box, .about-box-mobile, .recommend-box-mobile, .gallery-box-mobile, .scale-box-mobile, .contact-box-mobile, .ai-box, .ai-box-mobile {
+    height: 30vmin;
+    width: 30vmin;
+    margin: 5vmin;
+    margin-top: 0;
+    transform: translate(0%, 30%);
+    display: flex;
+    border-radius: 16px;
+    box-shadow: -15px 15px 10px rgba(82, 82, 82, 0.45);
+    transition: height 350ms ease, width 350ms ease, box-shadow 350ms ease;
+    margin-bottom: 10vmin;
 }
 
-.about-box:hover, .recommend-box:hover, .gallery-box:hover, .scale-box:hover, .contact-box:hover {
+.about-box:hover, .recommend-box:hover, .gallery-box:hover, .scale-box:hover, .contact-box:hover, .ai-box:hover {
     height: 33vmin;
     width: 33vmin;
     box-shadow: -45px 45px 30px rgba(82, 82, 82, 0.45);
 }
 
-.about-box-mobile, .recommend-box-mobile, .gallery-box-mobile, .scale-box-mobile, .contact-box-mobile {
+.about-box-mobile, .recommend-box-mobile, .gallery-box-mobile, .scale-box-mobile, .contact-box-mobile, .ai-box-mobile {
     box-shadow: none;
 }
 
@@ -403,66 +439,66 @@ body {
 }
 
 .about-box, .about-box-mobile {
-  background-image: url("../public/image/grad_walk.jpg");
-  background-size: 275%;
-  background-position: 50% 50%;
-  margin-bottom: 10vmin;
+    background-image: url("../public/image/grad_walk.jpg");
+    background-size: 275%;
+    background-position: 50% 50%;
 }
 
 .recommend-box, .recommend-box-mobile {
-  background-image: url("https://upload.wikimedia.org/wikipedia/en/7/74/The_Last_Stand_of_the_Tin_Can_Sailors.jpg");
-  background-size: cover;
-  margin-bottom: 10vmin;
+    background-image: url("https://upload.wikimedia.org/wikipedia/en/7/74/The_Last_Stand_of_the_Tin_Can_Sailors.jpg");
+    background-size: cover;
 }
 
 .gallery-box, .gallery-box-mobile {
-  background-image: url('../public/image/gallery/aryasnow.jpg');
-  background-size: cover;
-  background-position: 25% 0%;
-  margin-bottom: 10vmin;
+    background-image: url('../public/image/gallery/aryasnow.jpg');
+    background-size: cover;
+    background-position: 25% 0%;
 }
 
 .scale-box, .scale-box-mobile {
-  background-image: url("../public/image/ninetysecond_infantry.jpg");
-  background-size: cover;
-  margin-bottom: 10vmin;
+    background-image: url("../public/image/ninetysecond_infantry.jpg");
+    background-size: cover;
 }
 
 .contact-box, .contact-box-mobile {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PEPmWe92UMQHUMfIF-dWuLP_2cp-7QdteA&usqp=CAU");
-  background-size: cover;
-  margin-bottom: 10vmin;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PEPmWe92UMQHUMfIF-dWuLP_2cp-7QdteA&usqp=CAU");
+    background-size: cover;
+}
+
+.ai-box, .ai-box-mobile {
+    background-image: url("../public/image/gpt_logo.jpg");
+    background-size: cover;
 }
 
 .effect {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  border-radius: 16px;
-  background: linear-gradient(
-    130deg, 
-    transparent 0% 33%,  
-    rgb(38, 112, 38) 66%, 
-    rgb(99, 158, 38) 83.5%, 
-    rgb(177, 124, 84) 100%
-  );
-  background-position: 0% 0%;
-  background-size: 300% 300%;
-  transition: background-position 350ms ease, transform 350ms ease, color 700ms ease;
-  color: #ffffff00;
-  
-  text-align: center;
-  text-shadow: -15px 15px 10px rgba(49, 49, 49, 0);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 16px;
+    background: linear-gradient(
+        130deg, 
+        transparent 0% 33%,  
+        rgb(38, 112, 38) 66%, 
+        rgb(99, 158, 38) 83.5%, 
+        rgb(177, 124, 84) 100%
+    );
+    background-position: 0% 0%;
+    background-size: 300% 300%;
+    transition: background-position 350ms ease, transform 350ms ease, color 700ms ease;
+    color: #ffffff00;
+    
+    text-align: center;
+    text-shadow: -15px 15px 10px rgba(49, 49, 49, 0);
 }
 
 .effect:hover {
-  background-position: 100% 100%;
-  transform: scale(1.1, 1.1);
-  color: #ffffffff;
-  text-shadow: -15px 15px 10px rgba(49, 49, 49, 0.45);
+    background-position: 100% 100%;
+    transform: scale(1.1, 1.1);
+    color: #ffffffff;
+    text-shadow: -15px 15px 10px rgba(49, 49, 49, 0.45);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100;200;300;400;500;600;700;800&display=swap');
@@ -470,6 +506,7 @@ body {
 .scale {
     display: flex;
     flex-direction: column;
+    margin-bottom: 2rem;
 }
 
 .quiz-container {
@@ -636,7 +673,6 @@ body {
         border-radius: 16px;
         background-color: #253625;
         color: white;
-        /*box-shadow: -15px 15px 10px rgba(82, 82, 82, 0.45);*/
     }
 
     .title_author {
@@ -707,9 +743,9 @@ body {
       }
     
     .home-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .scale-box p {
@@ -734,7 +770,6 @@ body {
         background-color: #253625;
         color: white;
         padding: .5rem;
-        /*box-shadow: -15px 15px 10px rgba(82, 82, 82, 0.45);*/
     }
 
     .title_author {
@@ -788,6 +823,11 @@ body {
         font-size: 4rem;
         margin-bottom: 5px;
     }
+
+    .gpt-content p {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
 
 .filler {
@@ -813,8 +853,7 @@ body {
 .NavbarItems, .FootItems {
     background: linear-gradient(90deg, rgb(29, 48, 32) 0%, rgba(45, 65, 48, 1) 100%);
     opacity: 97%;
-    height: 8vh;
-    min-height: 70px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -998,7 +1037,6 @@ body {
         outline: 2px solid white;
         align-items: center;
         border-radius: 16px;
-        /*box-shadow: -20px 20px 10px rgba(82, 82, 82, 0.45);*/
     }
     
 }

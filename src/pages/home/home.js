@@ -26,20 +26,26 @@ const Home = () => {
                                 <p>Get to know Saul</p>
                             </div>
                         </div>
+                        <div className="ai-box" onClick={() => handleClick('/on-chat-gpt')}>
+                            <div className="effect">
+                                <h3>ChatGPT</h3>
+                                <p>Will ChatGPT replace the developer?</p>
+                            </div>
+                        </div>
                         <div className="recommend-box" onClick={() => handleClick('/recommended-media')}>
                             <div className="effect">
                                 <h3>Recommended Media</h3>
                                 <p>Entertainment I enjoy and recommend for others</p>
                             </div>
                         </div>
-                        <div className="gallery-box" onClick={() => handleClick('/gallery')}>
+                    </div>
+                    <div className="home-container">
+                    <div className="gallery-box" onClick={() => handleClick('/gallery')}>
                             <div className="effect">
                                 <h3>Gallery</h3>
                                 <p>Photos I have taken</p>
                             </div>
                         </div>
-                    </div>
-                    <div className="home-container">
                         <div className="scale-box" onClick={() => handleClick('/scales')}>
                             <div className="effect">
                                 <h3>Scales</h3>
@@ -65,15 +71,19 @@ const Home = () => {
                             <h3>About</h3>
                         </div>
                         <div className="mobile-container">
+                            <div className="ai-box-mobile" onClick={() => handleClick('/on-chat-gpt')} />
+                            <h3>On ChatGPT</h3>
+                        </div>
+                        <div className="mobile-container">
                             <div className="recommend-box-mobile" onClick={() => handleClick('/recommended-media')} />
                             <h3>Recommended</h3>
                         </div>
+                    </div>
+                    <div className="home-container">
                         <div className="mobile-container">
                             <div className="gallery-box-mobile" onClick={() => handleClick('/gallery')} />
                             <h3>Gallery</h3>
                         </div>
-                    </div>
-                    <div className="home-container">
                         <div className="mobile-container">
                             <div className="scale-box-mobile" onClick={() => handleClick('/scales')} />
                             <h3>Scales</h3>

@@ -50,17 +50,27 @@ const Chatgpt = () => {
                 <span className="content-container"><SyntaxHighlighter language="python" style={dark}>{strings.balancedSubstring}</SyntaxHighlighter></span>
                 <p>{strings.why4}</p>
                 <p>{strings.why5}</p>
-                <span className="content-container"><img src="image/gpt_chess_move.png" alt="The state of the chess board" draggable="false" /></span>
+                <img className="gpt-img" src="image/gpt_chess_move.png" alt="The state of the chess board" draggable="false" />
                 <p>{strings.why6}</p>
-                <span className="content-container"><img src="image/gpt_chess.jpg" alt="All the attempts from ChatGPT to make a legal move" draggable="false" /></span>
+                <img className="gpt-img" src="image/gpt_chess.jpg" alt="All the attempts from ChatGPT to make a legal move" draggable="false" />
                 <h2>What is the future of this technology?</h2>
                 <p>
                     {strings.future}
                 </p>
                 <h3>More on ChatGPT and Developers</h3>
                 <p>{strings.video}</p>
-                <iframe className="video" src="https://www.youtube.com/embed/3HoEJNyghFU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-                <iframe className="video" src="https://www.youtube.com/embed/tqN5NKHT7N0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                <div className="video-container">
+                    <div className="videoWrapper">
+                        <div className="video">
+                            <iframe src="https://www.youtube.com/embed/3HoEJNyghFU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                        </div>
+                    </div>
+                    <div className="videoWrapper">
+                        <div className="video">
+                        <iframe src="https://www.youtube.com/embed/tqN5NKHT7N0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                        </div>
+                    </div>
+                </div> 
             </div>
         </div>
     )
