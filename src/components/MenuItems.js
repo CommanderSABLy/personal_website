@@ -5,7 +5,7 @@ export const MenuItems = [
         cName: 'nav-links'
     },
     {
-        title: 'ChatGPT',
+        title: 'On ChatGPT',
         url: '/on-chat-gpt',
         cName: 'nav-links'
     },
