@@ -828,6 +828,10 @@ body {
         padding-left: 1rem;
         padding-right: 1rem;
     }
+
+    .quiz-container {
+        max-width: 80vw;
+    }
 }
 
 .filler {
