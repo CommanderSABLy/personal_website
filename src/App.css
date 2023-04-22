@@ -68,7 +68,7 @@ body {
     align-items: center;
 }
 
-.gpt h1, h2, h3 {
+.gpt h1, h2, h3{
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -76,6 +76,12 @@ body {
 
 .gpt h1 {
     font-size: 4rem;
+}
+
+.gpt h4 {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 1.05rem;
 }
 
 .gpt iframe {
