@@ -89,6 +89,7 @@ body {
     max-height: 80%;
     align-self: center;
     border-radius: 16px;
+    margin-bottom: 2rem;
 }
 
 .quote {
@@ -122,7 +123,6 @@ body {
     padding-right: 7vw;
     text-indent: 2em;
     font-size: 1.2rem;
-    margin-top: 1.5rem;
     margin-bottom: 2rem;
 }
 
@@ -547,8 +547,8 @@ body {
 .quiz-container h2 {
     font-size: 18px;
     font-weight: 500;
-     margin: 0;
-     color: #000000;
+    margin: 0;
+    color: #000000;
 }
 
 .quiz-container h3 {

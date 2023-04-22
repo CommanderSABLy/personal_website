@@ -15,7 +15,7 @@ const Chatgpt = () => {
             <div className="gpt-content">
                 <h2>What is ChatGPT?</h2>
                 <h3 className="quote">
-                    "{strings.what_is_gpt_quote}."</h3>
+                    "{strings.what_is_gpt_quote}"</h3>
                 <h3 className="quote"><span className="quote-attr"> -ChatGPT when asked to define itself.</span></h3>
                 <p>
                     {strings.what_is_gpt}
