@@ -5,6 +5,11 @@ export const MenuItems = [
         cName: 'nav-links'
     },
     {
+        title: 'On ChatGPT',
+        url: '/on-chat-gpt',
+        cName: 'nav-links'
+    },
+    {
         title: 'Recommended Media',
         url: '/recommended-media',
         cName: 'nav-links'

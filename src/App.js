@@ -8,22 +8,29 @@ import Gallery from './pages/gallery/gallery';
 import Contact from './pages/contact/contact';
 import Contacted from './pages/contact/contacted';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
+import Chatgpt from './pages/ChatGPT/chatgpt';
 
 function App() {
     return (
-        <Router className='App'>
-            <Navbar />
-            <Routes>
-                <Route path='/' exact element={<Home />} />
-                <Route path='/about' element={<About/>} />
-                <Route path='/scales' element={<Quiz/>} />
-                <Route path='/recommended-media' element={<Recommend/>} />
-                <Route path='/gallery' element={<Gallery/>} />
-                <Route path='/contact' element={<Contact/>} />
-                <Route path='/contact-email-sent' element={<Contacted/>} />
-            </Routes>
-            <Footer />
+        
+        <Router>
+            <div className='App'>
+                <Navbar />
+                <Routes>
+                    <Route path='/' exact element={<Home />} />
+                    <Route path='/about' element={<About/>} />
+                    <Route path='/on-chat-gpt' element={<Chatgpt />} />
+                    <Route path='/scales' element={<Quiz/>} />
+                    <Route path='/recommended-media' element={<Recommend/>} />
+                    <Route path='/gallery' element={<Gallery/>} />
+                    <Route path='/contact' element={<Contact/>} />
+                    <Route path='/contact-email-sent' element={<Contacted/>} />
+                </Routes>
+                <div className="foot">
+                    <Footer/>
+                </div>
+            </div>
         </Router>
     )
 }
