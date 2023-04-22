@@ -13,6 +13,7 @@ const Chatgpt = () => {
             {resetBackground()}
             <h1>ChatGPT is Not Here to Take Your Job, Yet</h1>
             <div className="gpt-content">
+                <h4>{strings.disclaimer}</h4>
                 <h2>What is ChatGPT?</h2>
                 <h3 className="quote">
                     "{strings.what_is_gpt_quote}"</h3>
